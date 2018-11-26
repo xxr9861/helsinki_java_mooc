@@ -1,0 +1,6663 @@
+* application
+
+#+BEGIN_SRC java
+
+// java application for greetin or taking input from the user
+
+// This is not an exercise but a "sandbox" where you can freely test
+// whatever you want
+import java.util.Scanner;
+public class Application {
+
+    public static void main(String[] args) {
+Scanner reader = new Scanner(System.in);
+System.out.print("Who is greeted: ");
+String name = reader.nextLine();
+System.out.print("HI" + name);
+
+
+        // Write the code here. You can run the code by 
+        // selecting Run->Run File from the menu or by pressing Shift+F6
+
+    }
+}
+// gave me  lot of headache with all that case specific shenanigans
+
+#+END_SRC
+
+#+BEGIN_SRC java
+
+// taking user input
+
+
+// This is not an exercise but a "sandbox" where you can freely test
+// whatever you want
+import java.util.Scanner;
+public class Application {
+
+    public static void main(String[] args) {
+
+        Scanner new_reader = new Scanner(System.in);
+        
+        System.out.println("please enter a number: ");
+        String user_input = new_reader.nextLine();
+        System.out.println("you entered the number " + user_input);
+        int user_input_number = Integer.parseInt(user_input);
+        System.out.println("you entered the number " + user_input_number);
+
+        // Write the code here. You can run the code by 
+        // selecting Run->Run File from the menu or by pressing Shift+F6
+
+    }
+}
+
+#+END_SRC
+* class circumferance
+
+#+BEGIN_SRC java
+
+//
+import java.util.Scanner;
+
+public class Circumference {
+
+   
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Program your solution here 
+        System.out.print("Type the radius: ");
+        String user_input = reader.nextLine();
+        int user_input1 = Integer.parseInt(user_input);
+        double radius = (double) user_input1;
+       //double pi = Math.PI();
+        double circumference = 2 * Math.PI * radius;
+        System.out.println("Circumference of the circle: "+ circumference);
+    }
+}
+
+//
+
+
+#+END_SRC
+* bigger number
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class BiggerNumber {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Implement your program here. Remember to ask the input from user
+        System.out.print("Type a number: ");
+        String user_input1 = reader.nextLine();
+        int user_input_number1 = Integer.parseInt(user_input1);
+        System.out.print("Type another number: ");
+        String user_input2 = reader.nextLine();
+        int user_input_number2 = Integer.parseInt(user_input2);
+        int bigger_number;
+        if (user_input_number1 > user_input_number2){
+            bigger_number = user_input_number1;
+        }
+        else {bigger_number = user_input_number2;
+        }
+        System.out.println("The bigger number of the two numbers given was: "+ bigger_number);
+        
+    }
+}
+
+//
+
+
+#+END_SRC
+* sum of the ages
+  #+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class SumOfTheAges {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Implement your program here
+        System.out.print("Type your name: ");
+        String name1 = reader.nextLine();
+        System.out.print("Type your age: ");
+        String age1 = reader.nextLine();
+        System.out.print("Type your name: ");
+        String name2 = reader.nextLine();
+        System.out.print("Type your age: ");
+        String age2 = reader.nextLine();
+        int age1a = Integer.parseInt(age1);
+        int age2a = Integer.parseInt(age2);
+        int total_age = age1a + age2a;
+        System.out.println(name1 +" and "+name2+" are " + total_age+ " years old in total.");
+        
+    }
+}
+
+//
+
+
+  
+  #+END_SRC
+* nhl statistics
+
+#+BEGIN_SRC java
+
+import nhlstats.NHLStatistics;
+
+public class Main {
+
+    public static void main(String[] args) {
+        NHLStatistics.sortByGoals();
+        NHLStatistics.top(10);
+        NHLStatistics.sortByPenalties();
+        NHLStatistics.top(25);
+        NHLStatistics.searchByPlayer("Sidney Crosby");
+        NHLStatistics.teamStatistics("PHI");
+        NHLStatistics.sortByPoints();
+        
+        NHLStatistics.teamStatistics("ANA");
+        
+    }
+}
+
+
+//
+
+#+END_SRC
+* nhl statistics
+  #+BEGIN_SRC java
+import nhlstats.NHLStatistics;
+
+public class Main {
+
+    public static void main(String[] args) {
+        NHLStatistics.sortByGoals();
+        NHLStatistics.top(10);
+        NHLStatistics.sortByPenalties();
+        NHLStatistics.top(25);
+        NHLStatistics.searchByPlayer("Sidney Crosby");
+        NHLStatistics.teamStatistics("PHI");
+        NHLStatistics.sortByPoints();
+        
+        NHLStatistics.teamStatistics("ANA");
+        
+    }
+}
+//
+
+  
+  #+END_SRC
+* positive value
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class PositiveValue {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Type your program here:
+        System.out.print("Type a number: ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        if (user_input_number > 0 ){
+            System.out.println("The number is positive.");
+            
+        }
+        else{
+            System.out.println("The number is not positive.");
+        }
+            
+    }
+}
+//
+
+
+#+END_SRC
+* age of majority
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class AgeOfMajority {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Type your program here 
+        System.out.print("How old are you? ");
+        String user_input = reader.nextLine();
+        int age = Integer.parseInt(user_input);
+        if (age >= 18){
+            System.out.println("You have reached the age of majority! ");
+        }
+        else{
+          System.out.println("You have not reached the age of majority! ");
+        }
+    }
+}
+
+// 
+#+END_SRC
+* even or odd
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class EvenOrOdd {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // Type your program here
+        System.out.print("Type a number: ");
+        String user_input = reader.nextLine();
+        int input_number = Integer.parseInt(user_input);
+        // boolean truth_value = input_number / 2;
+        int remainder = input_number % 2;
+        boolean isOdd = remainder != 0;
+        if ( isOdd ){
+            System.out.println("Number "+ input_number+ " is odd. ");
+        }
+        else{
+            System.out.println("Number "+input_number+ " is even. ");
+        }
+
+        // NOTE:
+        // Parity of a value can be easily checked with modulo-operator %.
+        // Test the following:
+        // System.out.println( 1%2 );
+        // System.out.println( 2%2 );
+        // System.out.println( 3%2 );
+        // System.out.println( 4%2 );
+        // System.out.println( 5%2 );
+        // System.out.println( 6%2 );
+         //  System.out.println( 7 / 2 );
+        // int value = 8
+        // System.out.println( value%2 );
+
+    }
+}
+
+//
+
+
+#+END_SRC
+* greater number
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class GreaterNumber {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type the first number: ");
+        String user_input1 = reader.nextLine();
+        int number1 = Integer.parseInt(user_input1);
+        System.out.print("Type the second number: ");
+        String user_input2 = reader.nextLine();
+        int number2 = Integer.parseInt(user_input2);
+        
+        boolean isNotEqual = number1 != number2;
+        
+        if (isNotEqual){
+            if (number1 > number2){
+                System.out.println("Greater number: "+number1);
+                
+            }
+            else{
+                System.out.println("Greater number: "+ number2);
+            }
+        }
+        else{
+            System.out.println("The numbers are equal!");
+        }
+    }
+}
+
+//
+#+END_SRC
+* grades and points
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class GradesAndPoints {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Type the points: ");
+        String user_input = reader.nextLine();
+        int point = Integer.parseInt(user_input);
+        String grade = "";
+        if (point >= 0 && point <= 29){
+            grade = "failed";
+        }
+        else if(point >= 30 && point <= 34){
+            grade = "1";
+        }
+        else if (point >= 35 && point <= 39){
+            grade = "2";
+                    }
+        else if (point >= 40 && point <= 44){
+            grade = "3";
+        }
+        else if (point >= 45 && point <= 49){
+            grade ="4";
+        }
+        else if (point >= 50 && point <= 60){
+            grade ="5";
+        }
+        else {
+            System.out.println("Out of range");
+        }
+        System.out.println("Grade:" + grade);
+        
+    }
+}
+//
+#+END_SRC
+* age check
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class AgeCheck {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("How old are you? ");
+        String user_input = reader.nextLine();
+        int age = Integer.parseInt(user_input);
+        boolean tooSmall = age < 0;
+        boolean tooBig = age > 120;
+        if (tooSmall || tooBig){
+            System.out.println("Impossible!");
+        }
+        else{
+            System.out.println("OK");
+        }
+
+    }
+}
+
+
+//
+
+#+END_SRC
+* user names
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class Usernames {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type your username: ");
+        String user_name = reader.nextLine();
+        System.out.print("Type your password: ");
+        String password = reader.nextLine();
+        String validCredentials = "";
+        if (user_name.equals("alex")){
+            if ( password.equals("mightyducks")){
+                validCredentials = "ok";
+            }
+            else{
+                validCredentials = "";
+            }
+        }
+        else if(user_name.equals("emily")){
+            if (password.equals("cat")){
+                validCredentials = "ok";
+            }
+            else{
+                validCredentials = "";
+            }
+        }
+       // boolean allOk = validCredentials.equals("ok");
+        if (validCredentials.equals("ok")){
+            System.out.println("You are now logged into the system! ");
+        }
+        else{
+            System.out.println("Your username or password was invalid! ");
+            
+        }
+    }
+}
+
+//
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        
+        int remainder = year % 4;
+        //boolean condition1 = remainder != 0;
+        
+        int remainder100 = year % 100;
+        boolean condition1 = remainder != 0;
+        if (condition1){
+            int remainder400 = year % 400;
+            boolean condition2 = remainder400 != 0;
+            
+        }
+        else{
+          
+            boolean condition2 = True;
+        }
+        
+        if (condition2){
+            System.out.println("The year is a leap year");
+        }
+        else{
+            System.out.println("The year is not a leap year");
+        }
+        
+
+    }
+}
+
+//
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        String leap_year = "";
+        if (!(year % 4 != 0)){
+            leap_year = "yes"; 
+                    //break;
+        }
+        else if(!(year % 100 != 0)){
+            if (!(year % 400 != 0)){
+                leap_year = "yes";
+                      //1 break;
+            }
+            else{
+                leap_year = "no";
+            }
+            
+        }
+        else{
+            leap_year = "no";
+        }
+            
+        if (leap_year.equals("yes")){
+        System.out.println("The year is a leap year. ");
+        }
+        else{
+            System.out.println("The year is not a leap year. ");
+        }
+        
+    }
+}
+
+
+//
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+       //boolean condition1;
+        boolean condition1 = ((year % 4) != 0);
+       //boolean condition2;
+        boolean condition2 = ((year % 100) != 0);
+       // boolean condition3;
+        boolean condition3 = ((year % 400) != 0);
+       
+        if (!(condition1)){
+            System.out.println("The year is a leap year. ");
+        }
+        else if ((!(condition2)) && (!(condition3))){
+            System.out.println("The year is a leap year. ");
+        }
+        else{
+            System.out.println("The year is not a leap year.");
+        }
+        
+    }
+}
+
+
+
+//
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+       //boolean condition1;
+        boolean condition1 = ((year % 4) != 0);
+       //boolean condition2;
+        boolean condition2 = ((year % 100) != 0);
+       // boolean condition3;
+        boolean condition3 = ((year % 400) != 0);
+       
+        if (!(condition1)){
+            System.out.println("The year is a leap year. ");
+        }
+        else if ((!(condition2)) && (!(condition3))){
+            System.out.println("The year is a leap year. ");
+        }
+        else{
+            System.out.println("The year is not a leap year.");
+        }
+        
+    }
+}
+
+// 
+#+END_SRC
+* password
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class Password {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        String password = "carrot"; // Use carrot as password when running tests.
+
+        // Write your code here
+        String secret = "jryy qbar!";
+        
+        
+        while(true){
+            System.out.print("Type the password: ");
+            String user_input = reader.nextLine();
+            if (user_input.equals(password)){
+                System.out.print("Right!");
+                break;
+            }
+            System.out.print("Wrong!");
+            
+            }
+        System.out.println("The secret is " + secret);
+        }
+        
+    
+    
+    }
+
+
+
+//
+
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        if ((yearDivideBy4(int year)) || (yearDivideBy100(int year) && yearDivideBy400(int year))){
+            System.out.println("The year is a leap year. ");
+        }else{
+            System.out.println("The year is not a leap year. ");
+        }
+        
+    }
+    
+    public boolean yearDivideBy4(int x){
+        int year = x;
+        if (year % 4 == 0){
+            return true;
+        }else{
+            return (false);
+        }
+    }
+    
+       public boolean yearDivideBy100(int x){
+        int year = x;
+        if (year % 100 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }      
+       public boolean yearDivideBy400(int x){
+        int year = x;
+        if (year % 400 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }
+}
+
+//
+
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        
+     //   if (yearDivideBy4(year) || (yearDivideBy100(year) && yearDivideBy400(year)   )    ){
+     //     System.out.println("The year is a leap year. ");
+     //   }else{
+     //       System.out.println("The year is not a leap year. ");
+     //   }
+        
+        if (yearDivideBy4(year)){
+            if(yearDivideBy100(year)){
+                if (yearDivideBy400(year)){
+                    System.out.println("The year is a leap year. ");
+                }else{
+                    System.out.println("The year is not a leap year. ");
+                    
+                }
+                
+            }
+            System.out.println("The year is a leap year. ");
+        }else{
+            System.out.println("The year is not a leap year. ");
+        }
+    }
+    
+    public static boolean yearDivideBy4(int x){
+        int year = x;
+        if (year % 4 == 0){
+            return true;
+        }else{
+            return (false);
+        }
+    }
+    
+       public static boolean yearDivideBy100(int x){
+        int year = x;
+        if (year % 100 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }      
+       public static boolean yearDivideBy400(int x){
+        int year = x;
+        if (year % 400 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }
+}
+
+
+
+//
+
+#+END_SRC
+* sum of three numbers
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int read; // store numbers read form user in this variable
+    System.out.println("Type the first number: ");
+    String first_number = reader.nextLine();
+    int number1 = Integer.parseInt(first_number);
+    System.out.println("Type the second number: ");
+    String second_number = reader.nextLine();
+    int number2 = Integer.parseInt(second_number);
+    System.out.println("Type the third number: ");
+    String third_number = reader.nextLine();
+    int number3 = Integer.parseInt(third_number);
+
+    sum = number1 + number2 + number3;
+    
+
+
+        // Write your program here
+        // Use only variables sum and read
+
+        System.out.println("Sum: " + sum);
+    }
+}
+
+
+//
+
+#+END_SRC
+* sum of three numbers
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int read; // store numbers read form user in this variable
+        String user_input = reader.nextLine();
+ String first;
+ String second;
+ String third;
+ 
+    sum = askUser( first) + askUser(second) + askUser(third);
+    
+
+
+        // Write your program here
+        // Use only variables sum and read
+
+        System.out.println("Sum: " + sum);
+    }
+    
+    private static String askuser(String x){
+        // staric String, for it takes string but returns int
+        // or static string and int
+        // for it takes string and returns int.
+        // or maybe takes int return string
+        String mystring = x;
+        System.out.println("Type the "+ mystring + "number. ");
+     return (takeUserInput());   
+     
+    }
+    private static int takeUserInput(){
+        
+         int read = Integer.parseInt(user_input);
+        return read;
+    }
+}
+
+
+//
+
+
+#+END_SRC
+* sum of three numbers
+
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        
+        int sum = 0;
+        int read; // store numbers read form user in this variable
+        
+ String first;
+ String second;
+ String third;
+ 
+    sum = askUser( first) + askUser(second) + askUser(third);
+    
+
+
+        // Write your program here
+        // Use only variables sum and read
+
+        System.out.println("Sum: " + sum);
+    }
+    
+     int askuser(String x){
+         //
+        // staric String, for it takes string but returns int
+        // or static string and int
+        // for it takes string and returns int.
+        // or maybe takes int return string
+        String mystring = x;
+        System.out.println("Type the "+ mystring + "number. ");
+     int user_input_number = takeUserInput();
+     return user_input_number;
+     
+    }
+     int takeUserInput(){
+         Scanner reader = new Scanner(System.in);
+        String user_input = reader.nextLine();
+         int read = Integer.parseInt(user_input);
+        return read;
+    }
+}
+
+
+//
+#+END_SRC
+* sum of three numbers
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        
+     //   int sum = 0;
+     //   int read; // store numbers read form user in this variable
+
+     int sum;
+       sum = my_function();
+
+
+        // Write your program here
+        // Use only variables sum and read
+
+        System.out.println("Sum: " + sum);
+    }
+    
+    
+     int my_function(){
+        
+                
+  String first;
+ String second;
+  String third;
+ 
+    // sum = askUser( first) + askUser(second) + askUser(third);
+    int a1 = askUser("first");
+    int a2 = askUser("second");
+    int a3 = askUser("third");
+    int our_sum = a1 + a2 + a3;
+    return our_sum; 
+    
+    
+    }
+    
+      int askUser(String x){
+  
+        String mystring = x;
+        System.out.println("Type the "+ mystring + "number. ");
+     int user_input_number = takeUserInput();
+     return user_input_number;
+     
+    }
+     int takeUserInput(){
+         Scanner reader = new Scanner(System.in);
+        String user_input = reader.nextLine();
+         int read = Integer.parseInt(user_input);
+        return read;
+    }
+}
+
+
+//
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        
+     //   if (yearDivideBy4(year) || (yearDivideBy100(year) && yearDivideBy400(year)   )    ){
+     //     System.out.println("The year is a leap year. ");
+     //   }else{
+     //       System.out.println("The year is not a leap year. ");
+     //   }
+        
+        if (yearDivideBy4(year)){
+            if(yearDivideBy100(year)){
+                if (yearDivideBy400(year)){
+                    System.out.println("The year is a leap year. ");
+                }else{
+                    System.out.println("The year is not a leap year. ");
+                    
+                }
+                
+            }
+            System.out.println("The year is a leap year. ");
+        }else{
+            System.out.println("The year is not a leap year. ");
+        }
+    }
+    
+    public static boolean yearDivideBy4(int x){
+        int year = x;
+        if (year % 4 == 0){
+            return true;
+        }else{
+            return (false);
+        }
+    }
+    
+       public static boolean yearDivideBy100(int x){
+        int year = x;
+        if (year % 100 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }      
+       public static boolean yearDivideBy400(int x){
+        int year = x;
+        if (year % 400 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }
+}
+
+
+//
+
+
+#+END_SRC
+* leap year
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a year: ");
+        String user_input = reader.nextLine();
+        int year = Integer.parseInt(user_input);
+        
+     //   if (yearDivideBy4(year) || (yearDivideBy100(year) && yearDivideBy400(year)   )    ){
+     //     System.out.println("The year is a leap year. ");
+     //   }else{
+     //       System.out.println("The year is not a leap year. ");
+     //   }
+       
+        if (yearDivideBy4(year)){
+            if(yearDivideBy100(year)){
+                if (yearDivideBy400(year)){
+                    System.out.println("The year is a leap year. ");
+             
+                }else{
+                    System.out.println("The year is not a leap year. ");
+                  
+                    
+                }
+                
+            }
+            System.out.println("The year is a leap year. ");
+        }else{
+            System.out.println("The year is not a leap year. ");
+        }
+   
+    
+        public static boolean yearDivideBy4(int x){
+        int year = x;
+        if (year % 4 == 0){
+            return true;
+        }else{
+            return (false);
+        }
+        }
+    
+       public static boolean yearDivideBy100(int x){
+        int year = x;
+        if (year % 100 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }      
+       public static boolean yearDivideBy400(int x){
+        int year = x;
+        if (year % 400 == 0){
+            return (true);
+        }else{
+            return (false);
+        }
+    }
+}
+
+
+//
+
+#+END_SRC
+* sum of many numbers
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+
+public class SumOfManyNumbers {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        
+        while (true) {
+            int read = Integer.parseInt(reader.nextLine());
+            if (read == 0) {
+                break;
+            }
+
+            // do something here
+            sum = sum + read;
+            System.out.println("Sum now: " + sum);
+        }
+        
+        System.out.println("Sum in the end: " + sum);
+    }
+}
+
+
+//
+
+public class FromOneToHundred {
+
+    public static void main(String[] args) {
+        // Write your program here
+        int counter = 1;
+        for (int x = 0; x <= 99; x++){
+            System.out.println(counter);
+            counter = counter +1;
+        }
+    }
+}
+
+//
+
+
+#+END_SRC
+* from hundred to one
+#+BEGIN_SRC java
+
+public class FromHundredToOne {
+
+    public static void main(String[] args) {
+        // Write your program here
+        int counter = 100;
+        for (int x = 0; x <= 99; x++){
+            System.out.println(counter);
+            counter--;
+        }
+    }
+}
+
+//
+
+
+#+END_SRC
+* even numbers
+  #+BEGIN_SRC java
+
+public class EvenNumbers {
+
+    public static void main(String[] args) {
+        // Write your code here
+        int counter = 2;
+        for (int x = 2; x <= 100; x++){
+            if (counter % 2 == 0){
+                System.out.println(counter);
+               
+            }
+            counter++;
+        }
+    }
+}
+
+
+//
+  
+  #+END_SRC
+* up to a certain number
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+
+public class UpToCertainNumber {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        // Write your code here
+        System.out.print("Up to what number? ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        
+        for (int x = 1; x <= user_input_number; x++){
+            System.out.println(x);
+        }
+        
+    }
+}
+
+
+//
+#+END_SRC
+* lower limit and upper limit
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LowerLimitAndUpperLimit {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        // write your code here
+        int lower; 
+        int upper;
+        System.out.print("First: ");
+        String user_input1 = reader.nextLine();
+        int First = Integer.parseInt(user_input1);
+        System.out.print("Last: ");
+        String user_input2 = reader.nextLine();
+        int Last = Integer.parseInt(user_input2);
+        
+for (int x = First; x <= Last; x++){
+    System.out.println(x);
+}        
+
+    }
+}
+
+
+//
+#+END_SRC
+* the sum of set of numbers
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class TheSumOfSetOfNumbers {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Until what? ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        
+        int sum = 0;
+        for (int x = 1; x <= user_input_number; x++){
+            sum = sum + x;
+        }
+        System.out.println("Sum is "+ sum);
+
+    }
+}
+
+
+//
+#+END_SRC
+* sum between two numbers
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+
+public class TheSumBetweenTwoNumbers {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("First: ");
+        String user_input1 = reader.nextLine();
+        int First = Integer.parseInt(user_input1);
+        
+        System.out.print("Last: ");
+        String user_input2 = reader.nextLine();
+        int Last = Integer.parseInt(user_input2);
+        int sum = 0;
+        for (int x = First; x <= Last; x++){
+            sum = sum + x;
+        }
+        System.out.println("The sum "+ sum);
+        
+    }
+}
+
+
+//
+#+END_SRC
+* factorial
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Type a number: ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        int myfactorial = 1;
+        for (int x = 1; x <= user_input_number; x++){
+            myfactorial = myfactorial * x;
+            
+            
+        }
+        System.out.println("Factorial is "+ myfactorial);
+        
+    }
+}
+
+
+//
+#+END_SRC
+* sum of powers
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class SumOfThePowers {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type a number: ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        
+        int mypower = 1;
+        for (int x = 1; x <= user_input_number; x++){
+           int  mypower_x = (int)Math.pow(2, x);
+            
+            mypower = mypower + mypower_x;
+            
+        }
+        
+        System.out.println("The result is "+ mypower);
+        
+
+    }
+}
+
+
+//
+#+END_SRC
+* loops ending remembering
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        
+        while (true){
+            
+                String user_input = reader.nextLine();
+                int user_input_number = Integer.parseInt(user_input);
+                if (user_input_number == -1){
+                    break;
+                }
+        }
+        System.out.println("Thank you and see you later! ");
+        
+    }
+}
+
+
+//
+#+END_SRC
+* loops ending remembering
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        int sum = 0;
+        int counter = 0;
+        while (true){
+               counter++;
+                String user_input = reader.nextLine();
+             
+                int user_input_number = Integer.parseInt(user_input);
+                sum = sum + user_input_number; 
+                if (user_input_number == -1){
+                    break;
+                }
+        }
+        System.out.println("Thank you and see you later! ");
+        System.out.println("The sum is "+ sum);
+        System.out.println("How many numbers: " + counter);
+        int average1 = sum / counter;
+        int average2 = sum % counter; 
+       
+        System.out.println("Average: "+ average1 +"."+average2);
+    }
+}
+
+
+//
+
+#+END_SRC
+* loops ending remembering
+
+  #+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        int sum = 0;
+        int counter = 0;
+        while (true){
+               counter++;
+                String user_input = reader.nextLine();
+             
+                int user_input_number = Integer.parseInt(user_input);
+               
+                if (user_input_number == -1){
+                    break;
+                }
+                 sum = sum + user_input_number; 
+        }
+        System.out.println("Thank you and see you later! ");
+        System.out.println("The sum is "+ sum);
+        System.out.println("How many numbers: " + counter);
+        int average1 = sum / counter;
+        int average2 = sum % counter; 
+       
+        System.out.println("Average: "+ average1 +"."+average2);
+    }
+}
+
+
+//  
+  #+END_SRC
+* loops ending remembering
+
+  #+BEGIN_SRC java
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        int sum = 0;
+        int counter = 0;
+        int number_of_even = 0;
+        int number_of_odd = 0;
+        while (true){
+               counter++;
+                String user_input = reader.nextLine();
+             
+                int user_input_number = Integer.parseInt(user_input);
+               
+                if (user_input_number == -1){
+                    break;
+                }
+                 sum = sum + user_input_number; 
+                 if ( check_even(user_input_number)){
+                     number_of_even++;
+                 }else{
+                     number_of_odd++;
+                 }
+        }
+        System.out.println("Thank you and see you later! ");
+        System.out.println("The sum is "+ sum);
+        System.out.println("How many numbers: " + counter);
+        int average1 = sum / counter;
+        int average2 = sum % counter; 
+       
+        System.out.println("Average: "+ average1 +"."+average2);
+        System.out.println("Even numbers: "+ number_of_even);
+        System.out.println("Odd numbers: "+ number_of_odd);
+        
+    }
+    
+    public boolean check_even(int x){
+        int number = x;
+        if(number % 2 == 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+
+//
+
+//  
+  #+END_SRC
+* loops ending remembering
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        int sum = 0;
+        int counter = 0;
+        int number_of_even = 0;
+        int number_of_odd = 0;
+        while (true){
+              
+                String user_input = reader.nextLine();
+             
+                int user_input_number = Integer.parseInt(user_input);
+               
+                if (user_input_number == -1){
+                    break;
+                }
+                 counter++;
+                 sum = sum + user_input_number; 
+                 if ( check_even(user_input_number)){
+                     number_of_even++;
+                 }else{
+                     number_of_odd++;
+                 }
+        }
+        System.out.println("Thank you and see you later! ");
+        System.out.println("The sum is "+ sum);
+        System.out.println("How many numbers: " + counter);
+        int average1 = sum / counter;
+        int average2 = sum % counter; 
+       
+        System.out.println("Average: "+ average1 +"."+average2);
+        System.out.println("Even numbers: "+ number_of_even);
+        System.out.println("Odd numbers: "+ number_of_odd);
+        
+    }
+    
+    public static boolean check_even(int x){
+        // adding static to this method resolved the previous error, idk why?
+        int number = x;
+        if(number % 2 == 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+
+//
+#+END_SRC
+* printing out text
+
+#+BEGIN_SRC java
+
+
+public class PrintingOutText {
+
+    public static void printText() {
+        // Write your code here
+        System.out.println("In the beginning there were the swamp, the hoe and Java.");
+    }
+
+    public static void main(String[] args) {
+        printText();
+    }
+}
+
+
+//
+
+
+#+END_SRC
+* many prints
+
+  #+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class ManyPrints {
+    // NOTE: do not change the method definition, e.g. add parameters to method
+    public static void printText() {
+        // Write your code here
+        System.out.println("In the beginning there were the swamp, the hoe and Java. ");
+    }
+
+    public static void main(String[] args) {
+        // ask the user how many times the text should be printed
+        // use the while structure to call the printText method several times
+        Scanner reader = new Scanner(System.in);
+        System.out.println("How many? ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        
+        for (int x = 0; x <= user_input_number; x++){
+            printText();
+        }
+    }
+}
+
+//  
+  #+END_SRC
+* many prints
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class ManyPrints {
+    // NOTE: do not change the method definition, e.g. add parameters to method
+    public static void printText() {
+        // Write your code here
+        System.out.println("In the beginning there were the swamp, the hoe and Java. ");
+    }
+
+    public static void main(String[] args) {
+        // ask the user how many times the text should be printed
+        // use the while structure to call the printText method several times
+        Scanner reader = new Scanner(System.in);
+        System.out.println("How many? ");
+        String user_input = reader.nextLine();
+        int user_input_number = Integer.parseInt(user_input);
+        
+        for (int x = 1; x <= user_input_number; x++){
+            printText();
+        }
+    }
+}
+
+//
+#+END_SRC
+* printing
+
+#+BEGIN_SRC java
+public class Printing {
+
+    public static void printStars(int amount) {
+        // 39.1
+        // you can print one star with the command
+        // System.out.print("*");
+        // call this command amount times       
+        for (int x = 1; x <= amount; x++){
+            System.out.print("*");
+            
+        }
+        System.out.println("");
+    }
+
+    public static void printSquare(int sideSize) {
+        // 39.2
+        
+      int row = sideSize;
+      int coloum = sideSize;
+      
+      while (row != 0){
+          for (int x = 1; x <= coloum; x++){
+              System.out.print("*");
+          }
+          System.out.println("");
+          row--;
+      }
+        
+    }
+
+    public static void printRectangle(int width, int height) {
+        // 39.3
+            
+      int row = height;
+      int coloum = width;
+      
+      while (row != 0){
+          for (int x = 1; x <= coloum; x++){
+              System.out.print("*");
+          }
+          System.out.println("");
+          row--;
+      }
+    }
+
+    public static void printTriangle(int size) {
+        // 39.4
+        int counter = 1;
+        while (counter <= size){
+        for (int x = 1; x <= counter; x++){
+            System.out.print("*");
+        }
+        System.out.println("");
+        counter++;
+    }
+    }
+
+    public static void main(String[] args) {
+        // Tests do not use main, yo can write code here freely!
+        // if you have problems with tests, please try out first 
+        // here to see that the printout looks correct
+
+        printStars(5);
+        printStars(3);
+        printStars(9);
+        System.out.println("\n---");  // printing --- to separate the figures
+        printSquare(4);
+        System.out.println("\n---");
+        printRectangle(17, 3);
+        System.out.println("\n---");
+        printTriangle(4);
+        System.out.println("\n---");
+    }
+
+}
+
+
+//
+#+END_SRC
+* printing
+
+#+BEGIN_SRC java
+
+public class Printing {
+
+    public static void printStars(int amount) {
+        // 39.1
+        // you can print one star with the command
+        // System.out.print("*");
+        // call this command amount times       
+        for (int x = 1; x <= amount; x++){
+            System.out.print("*");
+            
+        }
+        System.out.println("");
+    }
+
+    public static void printSquare(int sideSize) {
+        // 39.2
+        
+      int row = sideSize;
+   
+      
+      while (row != 0){
+       
+          printStars(sideSize);
+          row--;
+      }
+        
+    }
+
+    public static void printRectangle(int width, int height) {
+        // 39.3
+            
+      int row = height;
+      int coloum = width;
+      
+      while (row != 0){
+      printStars(coloum);
+          row--;
+      }
+    }
+
+    public static void printTriangle(int size) {
+        // 39.4
+        int counter = 1;
+        while (counter <= size){
+       printStars(counter);
+        counter++;
+    }
+    }
+
+    public static void main(String[] args) {
+        // Tests do not use main, yo can write code here freely!
+        // if you have problems with tests, please try out first 
+        // here to see that the printout looks correct
+
+        printStars(5);
+        printStars(3);
+        printStars(9);
+        System.out.println("\n---");  // printing --- to separate the figures
+        printSquare(4);
+        System.out.println("\n---");
+        printRectangle(17, 3);
+        System.out.println("\n---");
+        printTriangle(4);
+        System.out.println("\n---");
+    }
+
+}
+
+
+//
+// illegal start of expression
+#+END_SRC
+* printing like a boss
+#+BEGIN_SRC java
+//
+
+public class PrintingLikeBoss {
+
+    // copy or rewrite the method of Assignment 39.1 here
+    public static void printStars(int amount) {
+        for (int x = 0; x <= amount; x++){
+            System.out.print("*");
+        }
+        
+        System.out.println("");
+    }
+
+    public static void printWhitespaces(int amount) {
+        // 40.1
+        for (int x = 1; x <= amount ; x++){
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangle(int size) {
+        // 40.2
+        int x = 1;
+        while (x <= size){
+            printStars(x);
+            x++;
+        }
+      
+    }
+
+    public static void xmasTree(int height) {
+        // 40.3
+        int x = 1;
+        int y = 1;
+        while(x <= height){
+        printWhitespaces(height - y);
+        y++;
+        printStars(x);
+        x++;
+    }
+
+    public static void main(String[] args){
+        // Tests do not use main, yo can write code here freely!
+
+        printTriangle(5);
+        System.out.println("---");
+        xmasTree(4);
+        System.out.println("---");
+        xmasTree(10);
+    }
+}
+
+//
+#+END_SRC
+* printing like a boss
+#+BEGIN_SRC java
+public class PrintingLikeBoss {
+
+        public static void main(String[] args){
+        // Tests do not use main, yo can write code here freely!
+
+        printTriangle(5);
+        System.out.println("---");
+        xmasTree(4);
+        System.out.println("---");
+        xmasTree(10);
+    }
+        
+    // copy or rewrite the method of Assignment 39.1 here
+    public static void printStars(int amount) {
+        for (int x = 0; x <= amount; x++){
+            System.out.print("*");
+        }
+        
+        System.out.println("");
+    }
+
+    public static void printWhitespaces(int amount) {
+        // 40.1
+        for (int x = 1; x <= amount ; x++){
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangle(int size) {
+        // 40.2
+        int x = 1;
+        while (x <= size){
+            printStars(x);
+            x++;
+        }
+      
+    }
+
+    public static void xmasTree(int height) {
+        // 40.3
+        int x = 1;
+        int y = 1;
+        while(x <= height){
+        printWhitespaces(height - y);
+        y++;
+        printStars(x);
+        x++;
+    }
+
+
+}
+
+}
+// seems to be resolved.
+//
+#+END_SRC
+* printing like a boss
+
+#+BEGIN_SRC java
+
+public class PrintingLikeBoss {
+
+        public static void main(String[] args){
+        // Tests do not use main, yo can write code here freely!
+
+        printTriangle(5);
+        System.out.println("---");
+        xmasTree(4);
+        System.out.println("---");
+        xmasTree(11);
+    }
+        
+    // copy or rewrite the method of Assignment 39.1 here
+    public static void printStars(int amount) {
+        for (int x = 0; x <= amount; x++){
+            System.out.print("*");
+        }
+        
+        System.out.println("");
+    }
+
+    public static void printWhitespaces(int amount) {
+        // 40.1
+        for (int x = 1; x <= amount ; x++){
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangle(int size) {
+        // 40.2
+        int x = 1;
+        while (x <= size){
+            printStars(x);
+            x++;
+        }
+      
+    }
+
+    public static void xmasTree(int height) {
+        // 40.3
+        int x = 1;
+        int y = 1;
+        int padding = ( height - y) / 2;
+        while(x <= height){
+        printWhitespaces(padding);
+        padding--;
+        printStars(x);
+        x++;
+    }
+
+
+}
+
+}
+
+//
+#+END_SRC
+* printing like a boss
+
+  #+BEGIN_SRC java
+
+public class PrintingLikeBoss {
+
+        public static void main(String[] args){
+        // Tests do not use main, yo can write code here freely!
+
+        printTriangle(5);
+        System.out.println("---");
+        xmasTree(4);
+        System.out.println("---");
+        xmasTree(11);
+    }
+        
+    // copy or rewrite the method of Assignment 39.1 here
+    public static void printStars(int amount) {
+        for (int x = 0; x <= amount; x++){
+            System.out.print("*");
+        }
+        
+        System.out.println("");
+    }
+
+    public static void printWhitespaces(int amount) {
+        // 40.1
+        for (int x = 1; x <= amount ; x++){
+            System.out.print(" ");
+        }
+    }
+
+    public static void printTriangle(int size) {
+        // 40.2
+        int x = 1;
+        while (x <= size){
+            printStars(x);
+            x++;
+        }
+      
+    }
+
+    public static void xmasTree(int width) {
+        // 40.3
+        // (width / 2)
+        
+        int numberStars = 1;
+        int numberWhiteSpace = ( width / 2 -1 );
+        while(numberStars <= width){
+        printWhitespaces(numberWhiteSpace);
+        numberWhiteSpace--;
+        printStars(numberStars);
+        numberStars+=2;
+        
+    }
+
+
+}
+
+}
+
+//  
+  #+END_SRC
+* loops ending remembering
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class LoopsEndingRemembering {
+    public static void main(String[] args) {
+        // program in this project exercises 36.1-36.5
+        // actually this is just one program that is split in many parts
+        
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type numbers: ");
+        int sum = 0;
+        int counter = 0;
+        int number_of_even = 0;
+        int number_of_odd = 0;
+        float average;
+        while (true){
+              
+                String user_input = reader.nextLine();
+             
+                int user_input_number = Integer.parseInt(user_input);
+               
+                if (user_input_number == -1){
+                    break;
+                }
+                 counter++;
+                 sum = sum + user_input_number; 
+                 if ( check_even(user_input_number)){
+                     number_of_even++;
+                 }else{
+                     number_of_odd++;
+                 }
+        }
+        System.out.println("Thank you and see you later! ");
+        System.out.println("The sum is "+ sum);
+        System.out.println("How many numbers: " + counter);
+        average = (float)sum / counter;
+        String precise_average = String.format("%6f", average); 
+        //double average2 = sum % counter; 
+       
+        System.out.println("Average: "+precise_average );
+        System.out.println("Even numbers: "+ number_of_even);
+        System.out.println("Odd numbers: "+ number_of_odd);
+        
+    }
+    
+    public static boolean check_even(int x){
+        // adding static to this method resolved the previous error, idk why?
+        int number = x;
+        if(number % 2 == 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+
+//
+#+END_SRC
+* guessing number game
+#+BEGIN_SRC java
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessingNumberGame {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int numberDrawn = drawNumber();
+
+        // program your solution here. Do not touch the above lines!
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+        
+        
+        while (guess != numberDrawn){
+            // 
+            if (checkValidity(int guess, int numberDrawn)){
+                System.out.println("sucess");
+            }
+            
+            
+        }
+    }
+
+    
+    public boolean checkValidity(int guess, int numberDrawn){
+        int x = guess;
+        int y = numberDrawn;
+        if (guess == numberDrawn){
+            return true;
+        }
+        else{
+            return false;
+            checkSize(x, y);
+          }
+        
+        
+    public String checkSize(int x, int y){
+        int guess = x;
+        int numberDrawn = y;
+        if (guess > numberDrawn){
+            return "greater";
+        }else{
+            return "lesser";
+    }
+    }
+    public int queryUser(){
+     
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+        return guess;
+        
+    }
+    }
+    
+    // DO NOT MODIFY THIS!
+    private static int drawNumber() {
+        return new Random().nextInt(101);
+    }
+}
+
+
+//
+
+//totally wrong
+#+END_SRC
+* guessing number game
+#+BEGIN_SRC java
+//
+
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessingNumberGame {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int numberDrawn = drawNumber();
+
+        // program your solution here. Do not touch the above lines!
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+ 
+        while (guess != numberDrawn){
+            int new_guess = query_user();
+            if (new_guess == numberDrawn){
+                break;
+            }
+                else {
+                if (new_guess > numberDrawn){
+                        System.out.println("greater");
+                        }
+                else if (new_guess < numberDrawn){
+                        System.out.println("lesser");
+                        }
+            }
+            
+            
+        }
+        
+    }   
+
+    
+    public static int query_user(){
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+        return guess;
+ 
+    }
+    
+    // DO NOT MODIFY THIS!
+    private static int drawNumber() {
+        return new Random().nextInt(101);
+    }
+
+}
+
+//
+
+//
+
+#+END_SRC
+this seems to be the wrong one, wrong one is the following one
+* guessing number game
+
+#+BEGIN_SRC java
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessingNumberGame {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int numberDrawn = drawNumber();
+
+        // program your solution here. Do not touch the above lines!
+        
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+        int number_of_guess = 0;
+        while (guess != numberDrawn){
+            int new_guess = query_user();
+            number_of_guess++;
+            if (new_guess == numberDrawn){
+                System.out.println("Congratulations, your guess is correct!");
+                break;
+            }
+                else {
+                if (new_guess > numberDrawn){
+                        System.out.println("The number is greater, guesses made: "+ number_of_guess);
+                        }
+                else if (new_guess < numberDrawn){
+                        System.out.println("The number is lesser, guesses made: "+ number_of_guess);
+                        }
+            }
+            
+            
+        }
+        
+    }   
+
+    
+    public static int query_user(){
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Guess a number: ");
+        String user_guess = reader.nextLine();
+        int guess = Integer.parseInt(user_guess); 
+        return guess;
+ 
+    }
+    
+    // DO NOT MODIFY THIS!
+    private static int drawNumber() {
+        return new Random().nextInt(101);
+    }
+
+}
+
+//
+#+END_SRC
+* hangman user interface
+
+#+BEGIN_SRC java
+
+
+import hangman.Hangman;
+import java.util.Scanner;
+
+public class HangmanUserInteface {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        Hangman hangman = new Hangman();
+
+        System.out.println("***********");
+        System.out.println("* HANGMAN  *");
+        System.out.println("***********");
+        System.out.println("");
+        printMenu();
+        System.out.println("");
+
+        // PROGRAM YOUR SOLUTION HERE
+        while (hangman.gameOn()){
+        String user_input = reader.nextLine();
+        if (user_input.equals("quit")){
+            break;
+        }else if (user_input.equals("status")){
+            hangman.printStatus();
+        }
+    }
+
+
+        System.out.println("Thank you for playing!");
+    }
+
+    public static void printMenu() {
+        System.out.println(" * menu *");
+        System.out.println("quit   - quits the game");
+        System.out.println("status  - prints the game status");
+        System.out.println("a single letter uses the letter as a guess");
+        System.out.println("an empty line prints this menu");
+    }
+}
+
+
+//
+
+#+END_SRC
+* hangman user interface
+
+#+BEGIN_SRC java
+
+
+import hangman.Hangman;
+import java.util.Scanner;
+
+public class HangmanUserInteface {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        Hangman hangman = new Hangman();
+
+        System.out.println("***********");
+        System.out.println("* HANGMAN  *");
+        System.out.println("***********");
+        System.out.println("");
+        printMenu();
+        System.out.println("");
+
+        // PROGRAM YOUR SOLUTION HERE
+        while (hangman.gameOn()){
+        String user_input = reader.nextLine();
+        if (user_input.equals("quit")){
+            break;
+        }else if (user_input.equals("status")){
+            hangman.printStatus();
+        }else if (user_input.length() == 1){
+            hangman.guess(user_input);
+        }else if (user_input.isEmpty()){
+                printMenu();
+        }
+        hangman.printMan();
+        hangman.printWord();
+    }
+
+
+        System.out.println("Thank you for playing!");
+    }
+
+    public static void printMenu() {
+        System.out.println(" * menu *");
+        System.out.println("quit   - quits the game");
+        System.out.println("status  - prints the game status");
+        System.out.println("a single letter uses the letter as a guess");
+        System.out.println("an empty line prints this menu");
+    }
+}
+
+
+//
+#+END_SRC
+* temperature
+
+#+BEGIN_SRC java
+
+
+
+import java.util.Scanner;
+
+public class Temperatures {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+        // Write your code here. 
+
+        while (true){
+            System.out.println("Input floating point numbers: ");
+            double user_input = Double.parseDouble(reader.nextLine());
+            Graph.addNumber(user_input);
+        }
+        // Graph is used as follows:
+       // Graph.addNumber(7);
+        //double value = 13.5;
+        //Graph.addNumber(value);
+        //value = 3;
+        //Graph.addNumber(value);
+        // Remove or comment out these lines above before trying to run the tests.
+    }
+}
+
+
+//
+
+#+END_SRC
+* temperature
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class Temperatures {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+        // Write your code here. 
+
+        while (true){
+            System.out.println("Input floating point numbers: ");
+            double user_input = Double.parseDouble(reader.nextLine());
+            if (user_input < -30 || user_input > 40){
+            }else{
+            Graph.addNumber(user_input);
+        }}
+        // Graph is used as follows:
+       // Graph.addNumber(7);
+        //double value = 13.5;
+        //Graph.addNumber(value);
+        //value = 3;
+        //Graph.addNumber(value);
+        // Remove or comment out these lines above before trying to run the tests.
+    }
+}
+
+
+
+//
+#+END_SRC
+* sum of numbers
+
+#+BEGIN_SRC java
+public class SumOfNumbers {
+
+    public static int sum(int number1, int number2, int number3, int number4) {
+        // write your code here
+        int sum = number1 + number2 + number3+ number4;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int answer = sum(4, 3, 6, 1);
+        System.out.println("Sum: " + answer);
+    }
+}
+
+
+//
+
+
+#+END_SRC
+* least
+
+#+BEGIN_SRC java
+
+public class Least {
+
+    public static int least(int number1, int number2) {
+        // write program code here
+        // do not print anything inside the method
+        // method needs a return in the end
+        int lesser_number = 0;
+        if (number1 == number2){
+            lesser_number = number2;
+        }else if(number1 < number2){
+                    lesser_number = number1;
+                    
+                    }else if( number1 > number2){
+                    lesser_number = number2;
+                    }
+        return lesser_number;
+        }
+        
+    
+
+    public static void main(String[] args) {
+        int result = least(2, 7);
+        System.out.println("Least: " + result);
+    }
+
+}
+
+//
+#+END_SRC
+* greatest
+
+#+BEGIN_SRC java
+
+public class Greatest {
+
+    public static int greatest(int number1, int number2, int number3) {
+        int greater_of_two = 0;
+        if (number1 == number2){
+            greater_of_two = number2;
+        }else if (number1 > number2){
+            greater_of_two = number1;
+        }else if (number1 < number2){
+            greater_of_two = number2;
+        }
+        int greater_of_three = 0;
+        
+        if (greater_of_two == number3){
+            greater_of_three = number3;
+            
+        }else if(greater_of_two > number3){
+            greater_of_three = greater_of_two;
+        }else if (greater_of_two < number3){
+            greater_of_three = number3;
+        }
+        return greater_of_three;
+    }
+
+    public static void main(String[] args) {
+        int result = greatest(2, 7, 3);
+        System.out.println("Greatest: " + result);
+    }
+}
+
+
+//
+
+//
+
+
+//
+#+END_SRC
+
+ too much manual labour
+missed one
+* length of name
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class LengthOfName {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // call your method from here
+        System.out.print("Type your name: ");
+        String user_input = reader.nextLine();
+        int length_of_name;
+        length_of_name = lengthName(user_input);
+        System.out.println("Number of characters: "+ length_of_name);
+    }
+    
+    // do here the method
+    // public static int calculateCharacters(String text)
+    public static int lengthName(String name){
+        return name.length();
+        
+    }
+    
+}
+
+//
+#+END_SRC
+* first character
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class FirstCharacter {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String user_input = reader.nextLine();
+        char first_character = firstCharacter(user_input);
+        System.out.println("First character: "+ first_character);
+ 
+    }
+    
+    public static char firstCharacter(String name){
+        
+               char user_name_first_character = name.charAt(0);
+               return user_name_first_character;
+        
+    }
+}
+
+
+//
+#+END_SRC
+* last character
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+
+public class LastCharacter {
+
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Type your name: ");
+        String user_input = reader.nextLine();
+        // String last_character; 
+        // last_character = user_input.charAt(user_input.length());
+        
+        char the_last_character = lastCharacter(user_input, user_input.length());
+        System.out.println("The last character: "+ the_last_character);
+        
+    }
+    
+    public static char lastCharacter(String name, int last_index){
+        last_index = last_index - 1;
+        return name.charAt(last_index);
+        
+    }
+}
+
+
+//
+#+END_SRC
+* last character
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+
+public class LastCharacter {
+
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Type your name: ");
+        String user_input = reader.nextLine();
+        // String last_character; 
+        // last_character = user_input.charAt(user_input.length());
+        
+        char the_last_character = lastCharacter(user_input);
+        System.out.println("The last character: "+ the_last_character);
+        
+    }
+    
+    public static char lastCharacter(String name){
+        char the_last_character = name.charAt(name.length() - 1);
+        
+        return the_last_character;
+        
+    }
+}
+
+
+//
+#+END_SRC
+* first character
+  #+BEGIN_SRC java
+import java.util.Scanner;
+
+public class FirstCharacters {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+    // prompt user for name
+        System.out.print("Type your name: ");
+        // take user input
+        String user_input = reader.nextLine();
+        
+// length of user_input
+       int input_length = user_input.length();
+       
+       if (input_length <= 3){
+           // do nothing
+       }else{
+           System.out.println("1. character: "+ user_input.charAt(0));
+           System.out.println("2. character: "+ user_input.charAt(1));
+           System.out.println("3. character: "+ user_input.charAt(2));
+       }
+    
+    }
+    
+}
+
+
+//  
+  #+END_SRC
+* first characters
+  #+BEGIN_SRC java
+import java.util.Scanner;
+
+public class FirstCharacters {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+    // prompt user for name
+        System.out.print("Type your name: ");
+        // take user input
+        String user_input = reader.nextLine();
+        
+// length of user_input
+       int input_length = user_input.length();
+       
+       if (input_length <= 3){
+           // do nothing
+       }else{
+           int y; 
+           for (int x = 0; x<= 2; x++){
+               y = x +1;
+           System.out.println(y+". character: "+ user_input.charAt(x));
+           }
+       }
+    
+    }
+    
+}
+
+
+//  
+  #+END_SRC
+* seperating characters
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class SeparatingCharacters {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prompt user for a name
+        System.out.print("Type your name: ");
+        // take input from user
+        String user_input = reader.nextLine();
+        // get length of user_input
+        int user_input_length = user_input.length() - 1;
+        int y;
+        for (int x = 0; x <= user_input_length; x++){
+            y = x +1;
+            System.out.println(y+". character: "+ user_input.charAt(x));
+        }
+    }
+}
+
+
+//
+
+#+END_SRC
+* reversing name
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class ReversingName {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        // prompt for user name
+        System.out.print("Type your name: ");
+        // read user input
+        String user_input = reader.nextLine();
+        // length of the user input
+        int user_input_length = user_input.length() - 1;
+        //int y;
+        int z = user_input_length;
+        for (int x = 0; x <= user_input_length; x++){
+            
+          //  y = x+1;
+            System.out.print("In reverse order: ");
+            System.out.println(user_input.charAt(z));
+            z--;
+        }
+    }
+}
+
+
+//
+#+END_SRC
+* reversing name
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class ReversingName {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        // prompt for user name
+        System.out.print("Type your name: ");
+        // read user input
+        String user_input = reader.nextLine();
+        // length of the user input
+        int user_input_length = user_input.length() - 1;
+        //int y;
+        int z = user_input_length;
+        System.out.print("In reverse order: ");
+        for (int x = 0; x <= user_input_length; x++){
+            
+          //  y = x+1;
+            
+            System.out.print(user_input.charAt(z));
+            z--;
+        }
+        System.out.println("");
+    }
+}
+
+//
+#+END_SRC
+* first part
+
+  #+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class FirstPart {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prompt user for a word
+        System.out.print("Type a word: ");
+        // read the user input
+        String user_input = reader.nextLine();
+        // prompt user for int first part
+        System.out.print("Lenght of the first part:");
+        // read in the int first part length
+        String word_first_part_length = reader.nextLine();
+        int word_length = Integer.parseInt(word_first_part_length);
+        
+        
+        System.out.println("Result: "+ user_input.substring(0, word_length));
+        
+    }
+}
+
+
+//  
+  #+END_SRC
+* the end part
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class TheEndPart {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prompt user for a word
+        System.out.print("Type a word: ");
+        // read in the user input
+        String user_input = reader.nextLine();
+        
+        // prompt user for the length of last part
+        
+        System.out.print("Length of the end part: ");
+        // read in the last part
+        String user_input_length_last = reader.nextLine();
+        int length_last = Integer.parseInt(user_input_length_last);
+        
+        // print out the last part
+        System.out.println("Result: "+ user_input.substring(length_last));
+    }
+}
+
+
+//
+#+END_SRC
+* the end part
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class TheEndPart {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prompt user for a word
+        System.out.print("Type a word: ");
+        // read in the user input
+        String user_input = reader.nextLine();
+        
+        // prompt user for the length of last part
+        
+        System.out.print("Length of the end part: ");
+        // read in the last part
+        String user_input_length_last = reader.nextLine();
+        int length_last = Integer.parseInt(user_input_length_last);
+        // what is the lenght of the input string
+        int length_input_string = user_input.length();
+        
+        // print out the last part
+        
+        System.out.println("Result: "+ user_input.substring(length_input_string - length_last));
+    }
+}
+
+
+//
+#+END_SRC
+* word inside word
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class WordInsideWord {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prommt user for the first word
+        System.out.print("Type the first word: ");
+        // read in the first word
+        String user_input_1 = reader.nextLine();
+        // prompt user for the second word
+        System.out.print("Type the second word: ");
+        // read in the second word
+        String user_input_2 = reader.nextLine();
+        // see if the second word is inside the first word
+        int second_word_inside_first = user_input_1.indexOf(user_input_2);
+        if (second_word_inside_first){
+            System.out.println("The word "+ user_input_2+"is found in the word"+ user_input1);
+        }
+        
+    }
+}
+
+//
+#+END_SRC
+* word inside word
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class WordInsideWord {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // prommt user for the first word
+        System.out.print("Type the first word: ");
+        // read in the first word
+        String user_input_1 = reader.nextLine();
+        // prompt user for the second word
+        System.out.print("Type the second word: ");
+        // read in the second word
+        String user_input_2 = reader.nextLine();
+        // see if the second word is inside the first word
+        int second_word_inside_first = user_input_1.indexOf(user_input_2);
+        if (second_word_inside_first == -1){
+            // this means not found
+            System.out.println("The word "+ user_input_2+" is not found in the word "+ user_input_1);
+        }else{
+            // found the solution, if the substring is not found
+            // it would output -1
+            System.out.println("The word "+ user_input_2+" is found in the word "+ user_input_1);
+        }
+        
+    }
+}
+
+
+//
+#+END_SRC
+* reversing text
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class ReversingText {
+
+    public static String reverse(String text) {
+        // write your code here
+        // note that method does now print anything, it RETURNS the reversed string
+        // get lenght of the text
+        int input_text_length = text.length();
+        // String new_reversed_word;
+        int z;
+        for (int x = 0; x<= input_text_length; x++){
+            z = input_text_length;
+            return char text.charAt(z);
+            z--;
+            // we could just build a new_reversed_word
+            // but how??
+        }    
+        
+        //return "";
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type in your text: ");
+        String text = reader.nextLine();
+        System.out.println("In reverse order: " + reverse(text));
+    }
+}
+
+
+//
+#+END_SRC
+* reversing text
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class ReversingText {
+
+    public static String reverse(String text) {
+        // write your code here
+        // note that method does now print anything, it RETURNS the reversed string
+        // get lenght of the text
+        int input_text_length = text.length() - 1;
+        // String new_reversed_word;
+        String reversed_word = "";
+        int z;
+          z = input_text_length;
+        for (int x = 0; x<= input_text_length; x++){
+          
+            reversed_word = reversed_word + text.charAt(z);
+            z--;
+            // we could just build a new_reversed_word
+            // but how??
+            // so concatantion works, who knew
+        }    
+        
+        //return "";
+        return reversed_word;
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Type in your text: ");
+        String text = reader.nextLine();
+        System.out.println("In reverse order: " + reverse(text));
+    }
+}
+
+//
+#+END_SRC
+* words
+
+#+BEGIN_SRC java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Words {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> words = new ArrayList<String>();
+        // ask the user to input words
+        while (true){
+            System.out.print("Type a word: ");
+            // inside the loop, read in the word
+            String user_input = reader.nextLine();
+            
+            if (user_input.equals("")){
+                // break the loop
+                // this can be done in a better way where a null, means equality to -1 value
+                break;
+            }else{
+                // add the input to the array list
+                words.add(user_input);
+                
+            }
+            
+            
+            }
+        
+        System.out.println("You typed the following words: ");
+            for (String word : words){
+                System.out.println(word);
+        }
+        
+    }
+}
+
+
+//
+#+END_SRC
+* words
+
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Words {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> words = new ArrayList<String>();
+        // ask the user to input words
+        while (true){
+            System.out.print("Type a word: ");
+            // inside the loop, read in the word
+            String user_input = reader.nextLine();
+            
+            if (user_input.isEmpty()){
+                // break the loop
+                // this can be done in a better way where a null, means equality to -1 value
+                break;
+            }else{
+                // add the input to the array list
+                words.add(user_input);
+                
+            }
+            
+            
+            }
+        
+        System.out.println("You typed the following words: ");
+            for (String word : words){
+                System.out.println(word);
+        }
+        
+    }
+}
+
+
+//
+#+END_SRC
+* recurring word
+#+BEGIN_SRC java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RecurringWord {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // create here the ArrayList 
+        // let us create an array list
+        ArrayList<String> mylist = new ArrayList<String>();
+
+        while (true) {
+            // let us prompt the user to input words
+            System.out.print("Type a word: ");
+            // read in the word
+            String user_input = reader.nextLine();
+            // let us add the input string to the array list
+            if (does_it_repeat(mylist, user_input)) {
+                break;
+            } else {
+
+                mylist.add(user_input);
+            }
+        }
+
+    }
+
+    public static boolean does_it_repeat(ArrayList<String> whatever, String whatever_word) {
+        boolean does_it_repeat = false;
+        for (String word : whatever) {
+            if (whatever.contains(whatever_word)) {
+                does_it_repeat = true;
+            }
+        }
+        return does_it_repeat;
+
+    }
+}
+
+
+//
+#+END_SRC
+* recurring word
+
+#+BEGIN_SRC java
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RecurringWord {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // create here the ArrayList 
+        // let us create an array list
+        ArrayList<String> mylist = new ArrayList<String>();
+
+        while (true) {
+            // let us prompt the user to input words
+            System.out.print("Type a word: ");
+            // read in the word
+            String user_input = reader.nextLine();
+            // let us add the input string to the array list
+            if (does_it_repeat(mylist, user_input)) {
+                System.out.println("You gave the word "+user_input+" twice");
+                break;
+                
+            } else {
+
+                mylist.add(user_input);
+            }
+        }
+
+    }
+
+    public static boolean does_it_repeat(ArrayList<String> whatever, String whatever_word) {
+        boolean does_it_repeat = false;
+        for (String word : whatever) {
+            if (whatever.contains(whatever_word)) {
+                does_it_repeat = true;
+            }
+        }
+        return does_it_repeat;
+
+    }
+}
+
+
+//
+#+END_SRC
+* words in reverse order
+
+  #+BEGIN_SRC java
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class WordsInReverseOrder {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // create here an ArrayList
+        // creating a arraylist
+        ArrayList<String> words = new ArrayList<String>();
+        
+        // in a while loop ask the user for a word and if empty break the loop
+        while (true){
+            // prompt user for a word
+            System.out.print("Type a word: ");
+            //read in the word
+            String user_input = reader.nextLine();
+            // if condition to break the loop
+            if (user_input.isEmpty()){
+                break;
+            }else{
+                // add word to the list
+                words.add(user_input);
+            }
+        }
+        
+        // method call to reverse the array list
+        reverse_the_list(words);
+        
+    }
+    // method is void , as arraylist would be affected inside a method.
+    // array list are not insulated 
+    public static void reverse_the_list(ArrayList<String> whatever){
+        // get the size of the arraylist with the getsize method or something
+        int last_index = whatever.size() - 1;
+        // create a for loop for each for the whatever and add them to another arraylist
+        // only the problem is you cannot reverse them, so we would use our own devices
+        //let us create a newlist
+        ArrayList<String> my_new_list = new ArrayList<String>();
+        // let us populate this new list with the elements of the whatever list
+        int y = last_index; 
+        for (int x = 0; x <= last_index; x++){
+            my_new_list.add(whatever.get(y));
+            y--;
+            
+        }
+        
+        // just print out this new reversed list
+        System.out.println("Yout typed the following words: ");
+        for (String word : my_new_list){
+            System.out.println(word);
+        }
+        
+    }
+}
+
+
+//  
+  #+END_SRC
+* number of items
+
+  #+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class NumberOfItems {
+
+    // implement here the method countItems
+
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Moi");
+        list.add("Ciao");
+        list.add("Hello");
+        System.out.println("There are this many items on the list:");
+        // You can remove the comment from below when the method is done
+        System.out.println(countItems(list)); 
+        
+        
+    }
+    
+    public static int countItems(ArrayList<String> whatever){
+        int number_of_items = whatever.size();
+        return number_of_items;
+    }
+
+}
+
+//  
+  #+END_SRC
+* remove last
+
+  #+BEGIN_SRC java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class RemoveLast {
+    public static void removeLast(ArrayList<String> list) {
+        // first we have the find the index number of the last item.
+        // so we have to find size of the arraylist
+        int last_index = list.size() - 1;
+        // we have to do the minus one, because
+        // while the size returns, 1-n, the indexes work like 0-n-1;
+        
+        list.remove(last_index);
+        // we do not need to retun or anything in case of arraylist
+        // as unlike other primitive types, arraylist are effected blah blah
+    }
+
+    public static void main(String[] args) {
+        // Here an example what you can do with the method 
+        ArrayList<String> persons = new ArrayList<String>();
+        persons.add("Pekka");
+        persons.add("James");
+        persons.add("Liz");
+        persons.add("Brian");
+
+        System.out.println("Persons:");
+        System.out.println(persons);
+
+        // sort the persons
+        Collections.sort(persons);
+
+        // and remove the last
+        removeLast(persons);
+
+        System.out.println(persons);
+    }
+}
+
+
+//  
+  #+END_SRC
+* remove last
+
+  #+BEGIN_SRC java
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class RemoveLast {
+    public static void removeLast(ArrayList<String> list) {
+        // first we have the find the index number of the last item.
+        // so we have to find size of the arraylist
+        int last_index = list.size() - 1;
+        // we have to do the minus one, because
+        // while the size returns, 1-n, the indexes work like 0-n-1;
+        // if the value of last_index turns out to be 0 -1; or -1;
+        // print out a helpfull stuff and do not remove items
+        if (last_index == -1){
+            System.out.println("you have an empty list");
+        }else{
+            // not an empty list, proceed with removal
+            list.remove(last_index);
+        }
+        
+        // we do not need to retun or anything in case of arraylist
+        // as unlike other primitive types, arraylist are effected blah blah
+    }
+
+    public static void main(String[] args) {
+        // Here an example what you can do with the method 
+        ArrayList<String> persons = new ArrayList<String>();
+        // let us make the list empty
+       // persons.add("Pekka");
+        //persons.add("James");
+        //persons.add("Liz");
+        //persons.add("Brian");
+
+        System.out.println("Persons:");
+        System.out.println(persons);
+
+        // sort the persons
+        Collections.sort(persons);
+
+        // and remove the last
+        removeLast(persons);
+
+        System.out.println(persons);
+    }
+}
+
+//  
+  #+END_SRC
+ when the list is empty and we try to remove an item we get an out of bounds error
+ but why, empty list ->> size = 0; we are trying to remove the last item or 0 -1;
+* sum of numbers
+  #+BEGIN_SRC java
+
+//
+
+import java.util.ArrayList;
+
+public class SumOfNumbers {
+    public static int sum(ArrayList<Integer> list) {
+        // Write your code here
+        // loop throught the list using the for loop
+        // get the values using the get method
+        //for (number: list){
+          //  number.get();
+       // }
+       int last_index = list.size() - 1;
+       int sum = 0;
+        for (int x = 0; x <= last_index; x++){
+            sum = sum + list.get(x);
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        
+        System.out.println("The sum: " + sum(list));
+
+        list.add(10);
+        
+        System.out.println("The sum: " + sum(list));
+    }
+
+}
+
+
+//  
+  #+END_SRC
+* average of numbers
+
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class AverageOfNumbers {
+
+    // Copy here the method sum from previous assignment
+    public static int sum(ArrayList<Integer> list) {
+        // loop through the array list and using get method get the values and sum them up
+        int sum = 0;
+        int last_index = list.size() - 1;
+        
+        for (int x = 0; x <= last_index; x++ ){
+            sum = sum + list.get(x);
+            
+        }
+        return sum;
+    }
+    
+
+    public static double average(ArrayList<Integer> list) {
+        // write code here
+        // for average we do , sum/ number of items
+        // number of items is just the size of the list
+        int number_of_items = list.size();
+        double average = sum(list) / (double)number_of_items;
+        return average;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+
+        System.out.println("The average is: " + average(list));
+    }
+}
+
+
+//
+#+END_SRC
+* length of strings
+#+BEGIN_SRC java
+import java.util.ArrayList;
+
+public class LengthsOfStrings {
+    public static ArrayList<Integer> lengths(ArrayList<String> list) {
+        // this is confusing me.
+        // is this a constructor??
+        
+        ArrayList<Integer> lengthList = new ArrayList<Integer>();
+        // write code here
+        // this is just creating a new array list, which has already been done
+        // all we have to do is to loop through the arraylist , lengths
+        
+       // for (word: lengths){
+         //   lengths.get(word);
+            
+        //}// maybe this is not valid
+        int last_index = lengths.size();
+        
+        for (int x = 0; x <= last_index; x++){
+            
+        }
+        
+        // use get method to get the entries; 
+        // for each entries use charat method, in a for loop, return the number of loops 
+        // as lengths on the entries, and use add method to build up the other arraylist, lengthlist
+        
+        
+        
+        return lengthList;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Ciao");
+        list.add("Moi");
+        list.add("Benvenuto!");
+        list.add("badger badger badger badger");
+        ArrayList<Integer> lengths = lengths(list);
+        
+        System.out.println("The lengths of the Strings: " + lengths);
+    }
+}
+
+
+//
+#+END_SRC
+* length of strings
+
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class LengthsOfStrings {
+    public static ArrayList<Integer> lengths(ArrayList<String> list) {
+        // this is confusing me.
+        // is this a constructor??
+        
+        ArrayList<Integer> lengthList = new ArrayList<Integer>();
+        // write code here
+        // this is just creating a new array list, which has already been done
+        // all we have to do is to loop through the arraylist , list
+        
+       // for (word: list){
+         //   list.get(word);
+            
+        //}// maybe this is not valid
+        int last_index = list.size() - 1;
+        
+        for (int x = 0; x <= last_index; x++){
+         //   lengthList.add(Integer.valueOf( list.get(x)));
+         // lengthList.add(Integer.valueOf( length( list.get(x))));
+         // such a thing as string.length()
+         lengthList.add(Integer.valueOf(list.get(x).length()));
+         
+        }
+        
+        // use get method to get the entries; 
+        // for each entries use charat method, in a for loop, return the number of loops 
+        // as lengths on the entries, and use add method to build up the other arraylist, lengthlist
+        
+        
+        
+        return lengthList;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Ciao");
+        list.add("Moi");
+        list.add("Benvenuto!");
+        list.add("badger badger badger badger");
+        ArrayList<Integer> lengths = lengths(list);
+        
+        System.out.println("The lengths of the Strings: " + lengths);
+    }
+}
+
+
+//
+#+END_SRC
+* the greatest
+
+#+BEGIN_SRC java
+import java.util.ArrayList;
+
+public class TheGreatest {
+    public static int greatest(ArrayList<Integer> list) {
+        // write code here
+        // loop through the arraylist and use get method to get the integers
+        // define int the largest; then assign largest to the first value in loop
+        // on subsequent loops, compare and update, according to condition
+        
+        
+        int last_index = list.size() - 1;
+          int largest_number = 0;
+          // does not matter that we initialized it to 0, for in the first loop 
+          // we would just assign largest_number to the first entry in the arraylist
+        for (int x = 0 ; x <= last_index; x++){
+            //list.get(x);
+          
+            if (x == 0){
+                largest_number = list.get(x);
+            }
+            // in the first loop make largest_number equal to the first item of the arraylist
+            // on subsequent loops we do the comparision
+            if (list.get(x) > largest_number){
+                largest_number = list.get(x);
+                                
+            }
+        }
+        return largest_number;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> lista = new ArrayList<Integer>();
+        lista.add(3);
+        lista.add(2);
+        lista.add(7);
+        lista.add(2);
+        
+        System.out.println("The greatest number is: " + greatest(lista));
+    }
+}
+
+
+//
+#+END_SRC
+* variance
+
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class Variance {
+    // Copy here sum from exercise 63 
+    public static int sum(ArrayList<Integer> list) {
+        return 0;
+    }
+    
+    // Copy here average from exercise 64 
+    public static double average(ArrayList<Integer> list) {
+        return 0;
+    }
+
+    public static double variance(ArrayList<Integer> list) {
+        // write code here
+        // there is such a thing as the sample mean, we get that from the method, average.
+        // loop through the arraylist, list
+        int last_index = list.size() - 1;
+        int numerator = 0; 
+        double denominator = (last_index + 1 );
+        for (int x = 0; x <= last_index; x++){
+           numerator = numerator + (int list.get(x) - average(list)) ;
+        }
+        
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        
+        System.out.println("The variance is: " + variance(list));
+    }
+
+}
+
+
+//
+#+END_SRC
+* variance
+
+#+BEGIN_SRC java
+import java.util.ArrayList;
+
+public class Variance {
+    // Copy here sum from exercise 63 
+    public static int sum(ArrayList<Integer> list) {
+        int sum = 0;
+        int last_index = list.size() -1;
+        for (int x = 0; x <= last_index; x++){
+            sum = sum + list.get(x);
+        }
+        return sum;
+    }
+    
+    // Copy here average from exercise 64 
+    public static double average(ArrayList<Integer> list) {
+        // loop through the arraylist and get the sum of numbers
+        int last_index = list.size();
+        double average = sum(list) / (double) last_index;
+        return average;
+    }
+
+    public static double variance(ArrayList<Integer> list) {
+        // write code here
+        // there is such a thing as the sample mean, we get that from the method, average.
+        // loop through the arraylist, list
+        int last_index = list.size() - 1;
+        double numerator = 0.0; 
+        double my_average = average(list);
+        double denominator = (last_index + 1 );
+        for (int x = 0; x <= last_index; x++){
+           numerator = numerator + ( Integer.valueOf(list.get(x)) - my_average) ;
+        }
+        double variance = numerator / (double)denominator; 
+        return variance;
+    }
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        
+        System.out.println("The variance is: " + variance(list));
+    }
+
+}
+
+
+//
+#+END_SRC
+* variance
+#+BEGIN_SRC java
+import java.util.ArrayList;
+
+public class Variance {
+    // Copy here sum from exercise 63 
+    public static int sum(ArrayList<Integer> list) {
+        int sum = 0;
+        int last_index = list.size() -1;
+        for (int x = 0; x <= last_index; x++){
+            sum = sum + list.get(x);
+        }
+        return sum;
+    }
+    
+    // Copy here average from exercise 64 
+    public static double average(ArrayList<Integer> list) {
+        // loop through the arraylist and get the sum of numbers
+        int last_index = list.size();
+        double average = sum(list) / (double) last_index;
+        return average;
+    }
+
+    public static double variance(ArrayList<Integer> list) {
+        // write code here
+        // there is such a thing as the sample mean, we get that from the method, average.
+        // loop through the arraylist, list
+        int last_index = list.size() - 1;
+        double numerator = 0.0; 
+        double my_average = average(list);
+        double denominator = last_index;// as it it n -1
+        for (int x = 0; x <= last_index; x++){
+           numerator = numerator + Math.pow( (list.get(x) - my_average), 2) ;
+        }
+        double variance = numerator / (double)denominator; 
+        return variance;
+    }
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        
+        System.out.println("The variance is: " + variance(list));
+    }
+
+}
+
+// this one worked
+//
+#+END_SRC
+ this one worked
+* more than once
+#+BEGIN_SRC java
+
+
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MoreThanOnce {
+
+    public static boolean moreThanOnce(ArrayList<Integer> list, int searched) {
+        // write your code here
+        // loop through the list
+        boolean assumption = true;
+        int last_index = list.size() - 1;
+        
+        for (int x = 0; x <= last_index; x++){
+           // if (searched == Integer.valueOf(list.get(x))){
+              //return true;
+            // dont do anything
+            //}else{
+              //  assumption = false;
+        //  if (list.get(x).contains( searched)){
+    //  if (list.get(x) == searched){
+            if (searched ==list.get(x)){
+                  // dont do anything
+              }else{
+                  assumption = false;
+              }  
+            
+            //}
+        }
+        
+        
+        if (assumption == false){
+        return false;
+        }else{
+            return true;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+        
+        System.out.println("Type a number: ");
+        int number = Integer.parseInt(reader.nextLine());
+        if (moreThanOnce(list, number)) {
+            System.out.println(number + " appears more than once.");
+        } else {
+            System.out.println(number + " does not appear more than once. ");
+        }
+    }
+}
+
+
+//
+#+END_SRC
+* palindromi
+
+#+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class Palindromi {
+
+    public static boolean palindrome(String text) {
+        // write code here
+        // create  a while loop to loop through the text
+        // is the number odd or even
+                int x = 0;
+        int y = text.length() - 1;
+        boolean is_this_a_palindrome = true;
+        
+        if (text.length() % 2 == 0){
+           
+            while (x != ( y - 1)){
+                char xx = text.charAt(x);
+            System.out.println("first char of text is " + xx);
+            char yy = text.charAt(y);
+            System.out.println("second char of text is " + yy);
+            
+            y--;
+            x++;
+                
+            }
+        }else{
+           
+            while (x != y){
+                char xx = text.charAt(x);
+            System.out.println("first char of text is " + xx);
+            char yy = text.charAt(y);
+            System.out.println("second char of text is " + yy);
+            
+            y--;
+            x++;
+                
+            }
+        }
+
+        
+        return false;
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type a text: ");
+        String text = reader.nextLine();    
+        if (palindrome(text)) {
+            System.out.println("The text is a palindrome!");
+        } else {
+            System.out.println("The text is not a palindrome!");
+        }
+    }
+}
+
+
+
+//
+
+#+END_SRC
+* palindromi
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class Palindromi {
+
+    public static boolean palindrome(String text) {
+        // write code here
+        // create  a while loop to loop through the text
+        // is the number odd or even
+                int x = 0;
+        int y = text.length() - 1;
+        boolean is_this_a_palindrome = true;
+        
+        if (text.length() % 2 == 0){
+           
+            while (x != ( y - 1)){
+                char xx = text.charAt(x);
+            
+            char yy = text.charAt(y);
+            
+            if (xx != yy){
+                is_this_a_palindrome = false;
+                break;
+            }
+            
+            y--;
+            x++;
+                
+            }
+        }else{
+           
+            while (x != y){
+                char xx = text.charAt(x);
+            
+            char yy = text.charAt(y);
+            
+            
+             if (xx != yy){
+                is_this_a_palindrome = false;
+                break;
+            }
+             
+            y--;
+            x++;
+                
+            }
+        }
+
+        
+        return is_this_a_palindrome;
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type a text: ");
+        String text = reader.nextLine();    
+        if (palindrome(text)) {
+            System.out.println("The text is a palindrome!");
+        } else {
+            System.out.println("The text is not a palindrome!");
+        }
+    }
+}
+
+
+//
+// incomplete
+
+#+END_SRC
+* palindromi
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class Palindromi {
+
+    public static boolean palindrome(String text) {
+        // write code here
+        // create  a while loop to loop through the text
+
+        // another_text = text.reversed()
+        // for ( int x = 0 ; x <= text.length(); x++){text.chatAt(x) == another_text.charAt(x)}
+        String reversed_text = reverse(text);
+
+        
+        return false;
+    }
+
+    public static String reverse (String whatever){
+        // am i doing this like too much
+        // is there a reverse method already available??
+        String reversed_text ="";
+        int y = whatever.length() -1;
+        for (int x = 0; x <= whatever.length(); x++){
+            
+            reversed_text = reversed_text + whatever.charAt(y);
+            y--;
+            
+        }
+        
+        return reversed_text;
+        
+    }
+    
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Type a text: ");
+        String text = reader.nextLine();    
+        if (palindrome(text)) {
+            System.out.println("The text is a palindrome!");
+        } else {
+            System.out.println("The text is not a palindrome!");
+        }
+    }
+}
+
+
+//
+
+
+#+END_SRC
+* smart combining
+
+#+BEGIN_SRC java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class SmartCombining {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+
+        Collections.addAll(list1, 4, 3);
+
+        Collections.addAll(list2, 5, 10, 4, 3, 7);
+
+        // remove comment when method ready
+        //smartCombine(list1, list2);
+        smartCombine(list1, list2);
+        System.out.println(list1);
+        System.out.println(list2);
+    }
+    
+    public static void smartCombine(ArrayList<Integer> list1, ArrayList<Integer> list2){
+        for (int number : list2){
+            if (does_not_contain(list1, number)){
+                // dont do anything;
+                // i know the name of the method is confusing
+            }else{
+                list1.add(number);
+            }
+        }
+    }
+    
+    public static boolean does_not_contain(ArrayList<Integer> list, int number){
+        boolean does_it_contain = false;
+        int last_index = list.size() - 1;
+        for (int x = 0; x <= last_index; x++){
+            if (list.get(x) == number){
+                does_it_contain = true;
+                // seriously, can a for loop be broken
+                // we need to break the loop here. how?
+                break;  // so a break is possible in a for loop, TIL
+            }
+            
+        }
+        return does_it_contain;
+    }
+
+}
+
+//
+#+END_SRC
+* accounts
+
+#+BEGIN_SRC java
+
+
+import java.util.Scanner;
+
+public class Accounts {
+
+    public static void main(String[] args) {
+        // Code in Account.Java should not be touched!
+        // write your code here
+        Account firstAccount = new Account("the first account", 100);
+        firstAccount.deposit(20);
+        System.out.println("the money in the firstAccount is "+ firstAccount.balance());
+        
+    }
+
+}
+
+//
+#+END_SRC
+* accounts
+  #+BEGIN_SRC java
+
+import java.util.Scanner;
+
+public class Accounts {
+
+    public static void main(String[] args) {
+        // Code in Account.Java should not be touched!
+        // write your code here
+        Account firstAccount = new Account("the first account", 100);
+        firstAccount.deposit(20);
+        System.out.println( firstAccount);
+        
+    }
+
+}
+
+
+//  
+  #+END_SRC
+* accounts
+  #+BEGIN_SRC java
+
+public class Accounts {
+
+    public static void main(String[] args) {
+        // Code in Account.Java should not be touched!
+        // write your code here
+        Account account1 = new Account("Matt's account", 1000.0);
+        Account account2 = new Account("My account", 0.0);
+       account1.withdrawal(100);
+       account2.deposit(100);
+     
+       System.out.println(account1);
+        System.out.println( account2);
+    }
+
+}
+
+
+//  
+  #+END_SRC
+* accounts
+
+#+BEGIN_SRC java
+
+public class Accounts {
+
+    public static void main(String[] args) {
+        // Code in Account.Java should not be touched!
+        // write your code here
+        Account account1 = new Account("Matt's account", 1000);
+        Account account2 = new Account("My account", 0);
+       account1.withdrawal(100);
+       account2.deposit(100);
+     
+       System.out.println(account1);
+        System.out.println( account2);
+    }
+
+}
+
+
+//
+#+END_SRC
+* accounts
+
+#+BEGIN_SRC java
+
+public class Accounts {
+
+    public static void main(String[] args) {
+        // Code in Account.Java should not be touched!
+        // write your code here
+        // let us create 3 accounts 
+        Account A = new Account("A", 100);
+        Account B = new Account("B", 0);
+        Account C = new Account("C", 0);
+        
+        // no descriptive names, keeping both the same, maybe it wont effect anything
+        // and way too simpler and non confusing
+        
+        // transfer 50 from A to B
+        transfer(A,B,50);
+        // transfer 25 from B to C
+        transfer(B, C, 25);
+        
+        
+    }
+    
+    public static void transfer(Account from, Account to, double amount){
+        
+        from.withdrawal(amount);
+        to.deposit(amount);
+        
+        // no need for return, just like arraylist, it is directly affected.
+    }
+
+
+}
+
+
+//
+#+END_SRC
+* product
+
+#+BEGIN_SRC java
+
+//
+
+creating class files
+
+//
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class Product {
+    
+}
+
+//
+this was already present, the template for a class file
+
+//
+
+/* 
+ * Do not touch this!
+ */
+
+public class Account {
+
+    private double balance;
+    private String owner;
+
+    public Account(String owner, double balance) {
+        this.balance = balance;
+        this.owner = owner;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdrawal(double amount) {
+        balance -= amount;
+    }
+
+    public double balance() {
+        return balance;
+    }
+
+    @Override
+    public String toString() {
+        return owner + " balance: " + balance;
+    }
+}
+
+//
+#+END_SRC
+* product
+
+#+BEGIN_SRC java
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class Product {
+    // first declare the variables
+    private String nameAtStart;
+    // declare variables but make them private
+    private double priceAtStart;
+    private double amountAtStart;
+    
+    public void Product(String nameAtStart, double priceAtStart, double amountAtStart){
+        // why is the reason for putting static, when you declare a method.
+    this.nameAtStart = nameAtStart;
+    // when i put static in the method, it does not work.
+    // wonder why.
+    this.priceAtStart = priceAtStart;
+    this.amountAtStart = amountAtStart;
+    // maybe this is all that the Product method of the class Product will do
+    // the rest of the work would be done by other methods
+    }
+    
+    public void printProduct(String nameAtStart, double priceAtStart, double amountAtStart){
+        System.out.println(nameAtStart+", price"+priceAtStart+ " amount "+amountAtStart);
+    }
+}
+
+// will this work, there is this way to make a class file
+
+// in the main file
+
+public class Main {
+    public static void main(String[] args) {
+        // You can test your new class here, try e.g.:
+        
+        // Product t = new Product("Banana", 1.1, 13);
+        // t.printProduct();
+        Product whatever = new Product("Banana", 1.1, 13);
+        whatever.printProduct(nameAtStart, 0, 0);
+    }
+}
+
+//
+
+// see where we went wrong.
+
+// finally made a constructor class
+
+#+END_SRC
+* product
+
+#+BEGIN_SRC java
+//
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class Product {
+    // first declare the variables
+    private String nameAtStart;
+    // declare variables but make them private
+    private double priceAtStart;
+    private int amountAtStart;
+    
+    public Product(String nameAtStart, double priceAtStart, int amountAtStart){
+        // why is the reason for putting static, when you declare a method.
+        // cannot put it public void name
+        // why cannot i put in void, what does it mean to put in void there.
+    this.nameAtStart = nameAtStart;
+    // when i put static in the method, it does not work.
+    // wonder why.
+    this.priceAtStart = priceAtStart;
+    this.amountAtStart = amountAtStart;
+    // maybe this is all that the Product method of the class Product will do
+    // the rest of the work would be done by other methods
+    }
+    
+    //public void printProduct(String nameAtStart, double priceAtStart, double amountAtStart){
+      //  System.out.println(nameAtStart+", price"+priceAtStart+ " amount "+amountAtStart);
+        
+        // or am i doing this wrong
+        // nameAtStart, priceAtStart, etc are already defined why do you need to specifically pass
+        // them to this method. 
+        // they can be accessed without specifically being passed
+        public void printProduct(){
+            // takes no argument
+        System.out.println(nameAtStart+", price"+priceAtStart+ " amount "+amountAtStart);
+        
+    }
+}
+
+// this is the class file 
+
+public class Main {
+    // change the class main to class Product// nope i am wrong
+    public static void main(String[] args) {
+        // You can test your new class here, try e.g.:
+        
+        // Product t = new Product("Banana", 1.1, 13);
+        // t.printProduct();
+        Product whatever = new Product("Banana", 1.1, 13);
+        
+        whatever.printProduct();
+    }
+}
+
+#+END_SRC
+
+// this is the other file
+
+// so wrote another class file, but then i find some discrepencies
+// what is the reason to put in void or not put it there in the first place.
+// the one that they are calling constructor
+// pubic void name_of_constructor(parameters){
+
+// instead of doing all that
+// name_of_constructor(parameters){
+// inside the constructor you do
+
+// name_of_constructor(string x, int y, double z){
+// this.x = x;
+// this.y = y;
+// this.z = z;
+//}
+// that is all that constructor does.
+// in the end, just an artifact, a way of making things work, even if do not get why what.
+
+// so here is the class file
+* multiplier
+#+BEGIN_SRC java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class Multiplier {
+    // there was a problem with the filename
+    // the filename was mulitplier, changed it to multiplier.java
+    private int number;
+   //  private int otherNumber;
+    // there is no need to declare otherNumber; is there?
+    //private String namePerson;
+    //private int agePerson;
+
+     Multiplier(int number){
+         // if i put in 
+         // public void Multiplier(int i){
+         // i run into problems.// no need for void or public, i wonder why??
+        // you put in void, in the method, to imply not returning anything, no string or no int
+        //this.namePerson = namePerson;
+        //this.agePerson = agePerson;
+        this.number = number;
+        // this is basically a constructor, i have no idea what i am talking about
+        // constructor being the buzzword for what i do not understand, not yet
+    }
+    
+    public int multiply(int otherNumber){
+        return number * otherNumber;
+    }
+    
+    
+}
+
+// 
+
+// and here is the other file
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        // This is an empty main method which you can use to test your class's functionality.
+    
+        Multiplier threeMultiplier = new Multiplier(3);
+        
+       int whatever = threeMultiplier.multiply(400);
+        System.out.println(""+ whatever );
+        
+        
+        
+    
+    }
+    
+}
+
+//
+
+#+END_SRC
+* multiplier
+
+#+BEGIN_SRC java
+
+public class Main {
+
+    public static void main(String[] args) {
+        // This is an empty main method which you can use to test your class's functionality.
+    
+        Multiplier threeMultiplier = new Multiplier(3);
+        Multiplier fourMultiplier = new Multiplier(4);
+        
+        
+      // int whatever = threeMultiplier.multiply(400);
+       // System.out.println(""+ whatever );
+        
+        System.out.println("threeMultiplier.multipy(2): " + threeMultiplier.multiply(2));
+        System.out.println("fourMultiplier.multiply(2): " + fourMultiplier.multiply(2));
+        System.out.println("threeMultiplier.multipy(1): " + threeMultiplier.multiply(1));
+        System.out.println("fourMultiplier.multiply(1): " + fourMultiplier.multiply(1));
+        
+    
+    }
+    
+}
+
+
+//
+#+END_SRC
+
+
+// there were problems
+
+// about the constructor method in the class
+// you cannot have 
+// public void method()
+// you cannot have
+// method() // even though it works, but it kees on complaining
+// public method()
+// this seems to be the correct method.
+* multiplier
+#+BEGIN_SRC java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class Multiplier {
+
+    // there was a problem with the filename
+    // the filename was mulitplier, changed it to multiplier.java
+    private final int number;
+    // private final int, instead of private int.
+    
+    //  private int otherNumber;
+    // there is no need to declare otherNumber; is there?
+    //private String namePerson;
+    //private int agePerson;
+
+  public  Multiplier(int number) {
+        // if i put in 
+        // public void Multiplier(int i){
+        // have to put in public method(), instead of method()
+        // public void method()// this gave me problems
+        // i run into problems.// no need for void or public, i wonder why??
+        // you put in void, in the method, to imply not returning anything, no string or no int
+        //this.namePerson = namePerson;
+        //this.agePerson = agePerson;
+        this.number = number;
+        // this is basically a constructor, i have no idea what i am talking about
+        // constructor being the buzzword for what i do not understand, not yet
+    }
+
+    public int multiply(int otherNumber) {
+        return number * otherNumber;
+    }
+
+}
+
+
+// 
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        // This is an empty main method which you can use to test your class's functionality.
+    
+        Multiplier threeMultiplier = new Multiplier(3);
+        Multiplier fourMultiplier = new Multiplier(4);
+        
+        
+      // int whatever = threeMultiplier.multiply(400);
+       // System.out.println(""+ whatever );
+        
+        System.out.println("threeMultiplier.multipy(2): " + threeMultiplier.multiply(2));
+        System.out.println("fourMultiplier.multiply(2): " + fourMultiplier.multiply(2));
+        System.out.println("threeMultiplier.multipy(1): " + threeMultiplier.multiply(1));
+        System.out.println("fourMultiplier.multiply(1): " + fourMultiplier.multiply(1));
+        
+    
+    }
+    
+}
+
+//
+#+END_SRC
+* decreasing counter
+
+#+BEGIN_SRC java
+
+public class DecreasingCounter {
+    private int value;  // instance variable that remembers the value of the counter
+
+    public DecreasingCounter(int valueAtStart) {
+        this.value = valueAtStart;
+        // this one is interesting because
+        // this.y = y; is not happening
+        
+    }
+
+    public void printValue() {
+        // do not touch this!
+        System.out.println("value: " + this.value);
+    }
+
+    public void decrease() {
+        // write here code to decrease counter value by one
+        this.value--;
+    }
+
+    // and here the rest of the methods
+}
+
+
+//
+
+
+public class Main {
+    public static void main(String[] args) {
+        DecreasingCounter counter = new DecreasingCounter(10);
+
+        counter.printValue();
+        counter.decrease();
+        counter.printValue();
+        counter.decrease();
+        counter.printValue();
+        
+    }
+}
+
+
+//
+
+#+END_SRC
+* decreasing counter
+
+#+BEGIN_SRC java
+
+public class DecreasingCounter {
+    private int value;  // instance variable that remembers the value of the counter
+    private int rememberValue;
+    public DecreasingCounter(int valueAtStart) {
+        this.value = valueAtStart;
+        // this one is interesting because
+        // this.y = y; is not happening
+        this.rememberValue = valueAtStart;
+        // rememberValue is not touched anywhere.
+    }
+
+    public void printValue() {
+        // do not touch this!
+        System.out.println("value: " + this.value);
+    }
+
+    public void decrease() {
+        // write here code to decrease counter value by one
+        if (this.value <=0 ){
+            // dont do anything
+        }else{
+        this.value--;
+        }
+        
+    }
+
+    // and here the rest of the methods
+    public void reset(){
+        this.value = 0;
+    }
+    
+    public void setInitial(){
+        this.value = rememberValue;
+        // for this to work , there must be some way to remember the initial value.
+        // put the initial value into some kind of variable
+        
+    }
+}
+
+
+//
+
+public class Main {
+    public static void main(String[] args) {
+        DecreasingCounter counter = new DecreasingCounter(100);
+
+        counter.printValue();
+        counter.decrease();
+        counter.printValue();
+        counter.decrease();
+        counter.printValue();
+        counter.reset();
+        counter.printValue();
+        counter.setInitial();
+        counter.printValue();
+        
+    }
+}
+
+
+//
+
+#+END_SRC
+
+// the following bit , you got to see.
+// having problem with the whole loop things, the while loop but i want it go go on in a true condition and then to stop, in either of the two alternatives, it must stop.
+// while whatever the condition might be; in the first loop itself or rather after the first block you have to break;
+* lyyracard
+  #+BEGIN_SRC java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class LyyraCard {
+    private double balance;
+    
+    public LyyraCard(double balanceAtStart){
+        this.balance = balanceAtStart;
+        
+    }
+ 
+    
+  
+    public String toString(){
+        
+        return "The card has "+this.balance+" euros";
+        
+        
+    }
+    
+    public void payEconomical(){
+        if (sufficientForEconomical()){
+        this.balance -= 2.50;
+        }
+    }
+    
+    
+    public void payGourmet(){
+        if (sufficientForGourmet()){
+        this.balance -= 4.00;
+            }
+    }
+    
+        
+    private boolean sufficientForEconomical(){
+        if(this.balance < 2.50 ){
+            return false;
+        }
+        
+        return true;
+    }
+    
+    
+     private boolean sufficientForGourmet(){
+        if(this.balance < 4.00 ){
+            return false;
+        }
+        
+        return true;
+    }
+     
+     public void loadMoney(double amount){
+         // if amount is more than 150; truncate to 150
+         // if amount is negative; do nothing
+//         if (amount < 0){
+//             // do nothing
+//         }else if (amount > 150){
+//             this.balance = 150;
+//         }
+//         // or in the other cases do the following
+//         this.balance += amount; 
+      while ( amount > 0){
+          if (this.balance + amount >= 150){
+              this.balance = 150;
+              break;
+          }
+          // the rest part of the block would be considered as the else block
+          this.balance += amount;
+          break; // in either of the scenarios, we do not want the loop to go on, we want it to break
+      }
+         // you cannot have a while block , it would run indefinitely.
+//         if (amount > 0){
+//             if (this.balance + amount  > 150){
+//                 this.balance = 150;
+//                 break; // idk, there is no loop here so there is nothing to break, is it??
+//// this is what was missing
+//             }else{
+//             // in rest of the cases
+//             this.balance += amount;
+//             } 
+//         }
+         
+         
+         
+     }
+     
+    
+}
+
+//
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // add here code that tests LyraCard. However before doing 77.6 remove the
+        // other code 
+//        LyyraCard firstCard = new LyyraCard(10);
+//        System.out.println(firstCard);
+//        firstCard.payEconomical();
+//        System.out.println(firstCard);
+//        
+//        firstCard.payGourmet();
+//        firstCard.payEconomical();
+//        System.out.println(firstCard);
+        LyyraCard card = new LyyraCard(10);
+        System.out.println(card);
+
+        card.loadMoney(15);
+        System.out.println(card);
+
+        card.loadMoney(10);
+        System.out.println(card);
+
+        card.loadMoney(200);
+        System.out.println(card);
+    }
+}
+
+
+//  
+  #+END_SRC
+* lyyracard
+
+#+BEGIN_SRC java
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class LyyraCard {
+    private double balance;
+    
+    public LyyraCard(double balanceAtStart){
+        this.balance = balanceAtStart;
+        
+    }
+ 
+    
+  
+    public String toString(){
+        
+        return "The card has "+this.balance+" euros";
+        
+        
+    }
+    
+    public void payEconomical(){
+        if (sufficientForEconomical()){
+        this.balance -= 2.50;
+        }
+    }
+    
+    
+    public void payGourmet(){
+        if (sufficientForGourmet()){
+        this.balance -= 4.00;
+            }
+    }
+    
+        
+    private boolean sufficientForEconomical(){
+        if(this.balance < 2.50 ){
+            return false;
+        }
+        
+        return true;
+    }
+    
+    
+     private boolean sufficientForGourmet(){
+        if(this.balance < 4.00 ){
+            return false;
+        }
+        
+        return true;
+    }
+     
+     public void loadMoney(double amount){
+         // if amount is more than 150; truncate to 150
+         // if amount is negative; do nothing
+//         if (amount < 0){
+//             // do nothing
+//         }else if (amount > 150){
+//             this.balance = 150;
+//         }
+//         // or in the other cases do the following
+//         this.balance += amount; 
+      while ( amount > 0){
+          if (this.balance + amount >= 150){
+              this.balance = 150;
+              break;
+          }
+          // the rest part of the block would be considered as the else block
+          this.balance += amount;
+          break; // in either of the scenarios, we do not want the loop to go on, we want it to break
+      }
+         // you cannot have a while block , it would run indefinitely.
+//         if (amount > 0){
+//             if (this.balance + amount  > 150){
+//                 this.balance = 150;
+//                 break; // idk, there is no loop here so there is nothing to break, is it??
+//// this is what was missing
+//             }else{
+//             // in rest of the cases
+//             this.balance += amount;
+//             } 
+//         }
+         
+         
+         
+     }
+     
+    
+}
+
+//
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // add here code that tests LyraCard. However before doing 77.6 remove the
+        // other code 
+//        LyyraCard firstCard = new LyyraCard(10);
+//        System.out.println(firstCard);
+//        firstCard.payEconomical();
+//        System.out.println(firstCard);
+//        
+//        firstCard.payGourmet();
+//        firstCard.payEconomical();
+//        System.out.println(firstCard);
+
+
+
+
+//        LyyraCard card = new LyyraCard(10);
+//        System.out.println(card);
+//
+//        card.loadMoney(15);
+//        System.out.println(card);
+//
+//        card.loadMoney(10);
+//        System.out.println(card);
+//
+//        card.loadMoney(200);
+//        System.out.println(card);
+
+            LyyraCard Pekka = new LyyraCard(20);
+            LyyraCard Brian = new LyyraCard(30);
+            
+            Pekka.payGourmet();
+            Brian.payEconomical();
+            
+            System.out.println("Pekka "+Pekka);
+            System.out.println("Brian "+Brian);
+            
+            Pekka.loadMoney(20);
+            Brian.payGourmet();
+            
+            System.out.println("Pekka "+Pekka);
+            System.out.println("Brian "+Brian);
+            
+            Pekka.payEconomical();
+            Pekka.payEconomical();
+            
+            Brian.loadMoney(50);
+            
+            System.out.println("Pekka "+Pekka);
+            System.out.println("Brian "+Brian);
+            
+    }
+}
+
+
+//
+#+END_SRC
+* bounded counter
+#+BEGIN_SRC java
+
+// java the clock bit is not working
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private int upperLimit;
+
+    public void BoundedCounter(int whatever) {
+        this.upperLimit = whatever;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+        this.value++;
+    }
+
+    @Override
+    public String toString() {
+        return "" + this.value + "";
+
+    }
+
+}
+
+//
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+        
+        BoundedCounter xcounter = new BoundedCounter(4);
+        
+        System.out.println(xcounter + "Value at start: ");
+
+//        
+    }
+}
+
+
+//
+#+END_SRC
+
+
+
+// my logic circuits are totally blown
+// i get tangled in the simplest of logic stuff
+* bounded counter
+
+  #+BEGIN_SRC java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private int upperLimit;
+//    private final int limit = 14;
+//    public void BoundedCounter(int whatever) {
+    public BoundedCounter(int whatever) {
+        // there is no void in the example why is that.
+        // the constructor method BoundedCounter does not have keyword void, why is that.??
+        this.upperLimit = whatever;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+        if (this.value >= this.upperLimit){
+            //reset to zero
+            this.value = 0;
+           // break; // can a if thing hava  break, there is no loop, how to prevent it from executing next block
+        }else if (this.value < this.upperLimit){
+        this.value++;
+        }
+
+//        while (this.value < this.upperLimit) {
+//            this.value++;
+//            break;
+//        }
+//        
+//        if (this.value >= this.upperLimit) {
+//            // reset to zero
+//            this.value = 0;
+//        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "" + this.value + "";
+
+    }
+
+}
+
+//
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+        
+        BoundedCounter counter = new BoundedCounter(14);
+        // removed the void bit from the constructor method. weird
+        // now it works
+        System.out.println( "Value at start: " +counter );
+
+        int i = 0;
+        while (i < 16){
+            counter.next();
+            System.out.println("value: " +counter);
+            i++;
+        }
+//        
+    }
+}
+  
+  #+END_SRC
+
+// this bit goes into infinite loop
+* bounded counter
+
+#+BEGIN_SRC java
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private int upperLimit;
+//    private final int limit = 14;
+//    public void BoundedCounter(int whatever) {
+    public BoundedCounter(int whatever) {
+        // there is no void in the example why is that.
+        // the constructor method BoundedCounter does not have keyword void, why is that.??
+        this.upperLimit = whatever;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+        if (this.value >= this.upperLimit){
+            //reset to zero
+            this.value = 0;
+           // break; // can a if thing hava  break, there is no loop, how to prevent it from executing next block
+        }else if (this.value < this.upperLimit){
+        this.value++;
+        }
+
+//        while (this.value < this.upperLimit) {
+//            this.value++;
+//            break;
+//        }
+//        
+//        if (this.value >= this.upperLimit) {
+//            // reset to zero
+//            this.value = 0;
+//        }
+
+    }
+    
+    public int getValue(){
+        
+        
+        return this.value;
+        
+    }
+    
+
+    @Override
+    public String toString() {
+        // if this.value < 10; then return "0"+this.value
+        if (this.value < 10){
+            return "0"+this.value+"" ;
+        }else{
+        return "" + this.value + "";
+        }
+    }
+
+}
+
+//
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+
+//        BoundedCounter counter = new BoundedCounter(14);
+//        // removed the void bit from the constructor method. weird
+//        // now it works
+//        System.out.println( "Value at start: " +counter );
+//
+//        int i = 0;
+//        while (i < 16){
+//            counter.next();
+//            System.out.println("value: " +counter);
+//            i++;
+//        }
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        int i = 0;
+        while (i <= 121) {
+
+            System.out.println(hours + " : " + minutes);
+            // advance the minutes
+//            minutes.next();
+//            // avdance the hours
+//            hours.next();
+//            if (minutes <= 59){
+//                minutes.next();
+//            }else(minutes >= 60){
+//            hours.next();
+//            minutes.next();
+//        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+            while (minutes.getValue() <= 59) {
+                minutes.next();
+           break;
+               // hours.next();
+                }
+            if (minutes.getValue() >= 59){
+                hours.next();
+                
+            }
+        }
+
+        i++;
+    }
+//        
+}
+
+
+//
+
+#+END_SRC
+
+// this small bit was really killing me
+// so if somebody was to tell me to implement a clock i would most definitely fail.
+* bounded counter , main 
+#+BEGIN_SRC java
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+
+//        BoundedCounter counter = new BoundedCounter(14);
+//        // removed the void bit from the constructor method. weird
+//        // now it works
+//        System.out.println( "Value at start: " +counter );
+//
+//        int i = 0;
+//        while (i < 16){
+//            counter.next();
+//            System.out.println("value: " +counter);
+//            i++;
+//        }
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        int i = 0;
+        while (i <= 121) {
+
+            System.out.println(hours + " : " + minutes);
+            // advance the minutes
+//            minutes.next();
+//            // avdance the hours
+//            hours.next();
+//            if (minutes <= 59){
+//                minutes.next();
+//            }else(minutes >= 60){
+//            hours.next();
+//            minutes.next();
+//        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+//            if (minutes.getValue() <= 59 && hours.getValue() <= 23) {
+//                minutes.next();
+//                // this would keep the minutes incrementing
+//                //  break;
+                // hours.next();
+// i am missing something, minutes and  hours reset themselves
+// find a way of tying minutes with hours
+//
+//            } else if (minutes.getValue() >= 59) {
+//                hours.next();
+//                // minutes would get reset back to zero by design of the constructor
+//                // and the while loop continues.
+//                // hence the need for a break here
+//                //break;
+//                
+//               
+//            }
+            
+          // advance minutes
+          minutes.next();
+          if (minutes.getValue() >= 59){
+              hours.next();
+          }
+            
+            // my head is toasted
+// maybe envelope this whole thing inside an if block for hours.getvalue
+            i++;
+        }
+
+    }
+//        
+}
+
+
+#+END_SRC
+* bounded counter
+
+#+BEGIN_SRC java
+//
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private int upperLimit;
+//    private final int limit = 14;
+//    public void BoundedCounter(int whatever) {
+    public BoundedCounter(int whatever) {
+        // there is no void in the example why is that.
+        // the constructor method BoundedCounter does not have keyword void, why is that.??
+        this.upperLimit = whatever;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+        if (this.value >= this.upperLimit){
+            //reset to zero
+            this.value = 0;
+           // break; // can a if thing hava  break, there is no loop, how to prevent it from executing next block
+        }else if (this.value < this.upperLimit){
+        this.value++;
+        }
+
+//        while (this.value < this.upperLimit) {
+//            this.value++;
+//            break;
+//        }
+//        
+//        if (this.value >= this.upperLimit) {
+//            // reset to zero
+//            this.value = 0;
+//        }
+
+    }
+    
+    public int getValue(){
+        
+        
+        return this.value;
+        
+    }
+    
+    public void setValue(){
+        
+        
+    }
+    
+
+
+    public String toString() {
+        // if this.value < 10; then return "0"+this.value
+        if (this.value < 10){
+            return "0"+this.value+"" ;
+        }else{
+        return "" + this.value + "";
+        }
+    }
+
+}
+
+
+//
+
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+
+//        BoundedCounter counter = new BoundedCounter(14);
+//        // removed the void bit from the constructor method. weird
+//        // now it works
+//        System.out.println( "Value at start: " +counter );
+//
+//        int i = 0;
+//        while (i < 16){
+//            counter.next();
+//            System.out.println("value: " +counter);
+//            i++;
+//        }
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        int i = 0;
+        while (i <= 121) {
+
+            System.out.println(hours + ":" + minutes);
+            // advance the minutes
+//            minutes.next();
+//            // avdance the hours
+//            hours.next();
+//            if (minutes <= 59){
+//                minutes.next();
+//            }else(minutes >= 60){
+//            hours.next();
+//            minutes.next();
+//        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+//            if (minutes.getValue() <= 59 && hours.getValue() <= 23) {
+//                minutes.next();
+//                // this would keep the minutes incrementing
+//                //  break;
+                // hours.next();
+// i am missing something, minutes and  hours reset themselves
+// find a way of tying minutes with hours
+//
+//            } else if (minutes.getValue() >= 59) {
+//                hours.next();
+//                // minutes would get reset back to zero by design of the constructor
+//                // and the while loop continues.
+//                // hence the need for a break here
+//                //break;
+//                
+//               
+//            }
+            
+          // advance minutes
+          minutes.next();
+//          if (minutes.getValue() >= 59){
+              if (minutes.getValue() == 0){
+              hours.next();
+          }
+            
+            // my head is toasted
+// maybe envelope this whole thing inside an if block for hours.getvalue
+            i++;
+        }
+
+    }
+//        
+}
+
+
+#+END_SRC
+* bounded counter
+#+BEGIN_SRC java
+//
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private int upperLimit;
+//    private final int limit = 14;
+//    public void BoundedCounter(int whatever) {
+
+    public BoundedCounter(int whatever) {
+        // there is no void in the example why is that.
+        // the constructor method BoundedCounter does not have keyword void, why is that.??
+        this.upperLimit = whatever;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+        if (this.value >= this.upperLimit) {
+            //reset to zero
+            this.value = 0;
+            // break; // can a if thing hava  break, there is no loop, how to prevent it from executing next block
+        } else if (this.value < this.upperLimit) {
+            this.value++;
+        }
+
+//        while (this.value < this.upperLimit) {
+//            this.value++;
+//            break;
+//        }
+//        
+//        if (this.value >= this.upperLimit) {
+//            // reset to zero
+//            this.value = 0;
+//        }
+    }
+
+    public int getValue() {
+
+        return this.value;
+
+    }
+
+    public void setValue(int thiscounter) {
+//        if (!(thiscounter < 0 && thiscounter > this.upperLimit )){
+//            this.value = thiscounter;
+//        }
+//        
+        //thiscounter < 0 && thiscounter > this.upperLimit
+        // this is idiotic, they are mutually exclusive.
+
+        while (thiscounter > 0 && thiscounter < this.upperLimit) {
+
+            this.value = thiscounter;
+            break;
+        }
+    }
+
+
+
+public String toString() {
+        // if this.value < 10; then return "0"+this.value
+        if (this.value < 10){
+            return "0"+this.value+"" ;
+        }else{
+        return "" + this.value + "";
+        }
+    }
+
+}
+
+
+//
+
+
+//
+//import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        Scanner reader = new Scanner(System.in);
+        // write here code to ensure that BoundedCounter works as expected
+        // before starting 78.3 remove the extra code and use the skeleton shown
+        // in the assignment
+// create a new counter object
+
+//        BoundedCounter counter = new BoundedCounter(14);
+//        // removed the void bit from the constructor method. weird
+//        // now it works
+//        System.out.println( "Value at start: " +counter );
+//
+//        int i = 0;
+//        while (i < 16){
+//            counter.next();
+//            System.out.println("value: " +counter);
+//            i++;
+//        }
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        int i = 0;
+        while (i <= 121) {
+
+            System.out.println(hours + ":" + minutes);
+            // advance the minutes
+//            minutes.next();
+//            // avdance the hours
+//            hours.next();
+//            if (minutes <= 59){
+//                minutes.next();
+//            }else(minutes >= 60){
+//            hours.next();
+//            minutes.next();
+//        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+//            if (minutes.getValue() <= 59 && hours.getValue() <= 23) {
+//                minutes.next();
+//                // this would keep the minutes incrementing
+//                //  break;
+                // hours.next();
+// i am missing something, minutes and  hours reset themselves
+// find a way of tying minutes with hours
+//
+//            } else if (minutes.getValue() >= 59) {
+//                hours.next();
+//                // minutes would get reset back to zero by design of the constructor
+//                // and the while loop continues.
+//                // hence the need for a break here
+//                //break;
+//                
+//               
+//            }
+            
+          // advance minutes
+          minutes.next();
+//          if (minutes.getValue() >= 59){
+              if (minutes.getValue() == 0){
+              hours.next();
+          }
+            
+            // my head is toasted
+// maybe envelope this whole thing inside an if block for hours.getvalue
+            i++;
+        }
+
+    }
+//        
+}
+
+
+//
+#+END_SRC
+* bounded counter, main
+
+#+BEGIN_SRC java
+
+//
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        
+        Scanner reader = new Scanner(System.in);
+        
+        BoundedCounter seconds = new BoundedCounter(59);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+        
+        System.out.print("seconds: ");
+        String s1 = reader.nextLine();
+        int s = Integer.parseInt(s1);
+        
+        System.out.print("minutes: ");
+        String m1 = reader.nextLine();
+        int m = Integer.parseInt(m1);
+        
+        System.out.print("hours: ");
+        String h1 = reader.nextLine();
+        int h = Integer.parseInt(h1);
+        
+        seconds.setValue(s);
+        minutes.setValue(m);
+        hours.setValue(h);
+        
+        int i = 0;
+        while (i < 121){
+            System.out.println(hours +":"+minutes+":"+seconds);
+            seconds.next();
+            if (seconds.getValue() == 0){
+                
+                minutes.next();
+                
+                if (minutes.getValue() == 0){
+                    hours.next();
+                }
+            }
+            i++;
+            
+            
+        }
+//        // write here code to ensure that BoundedCounter works as expected
+//        // before starting 78.3 remove the extra code and use the skeleton shown
+//        // in the assignment
+//// create a new counter object
+//
+////        BoundedCounter counter = new BoundedCounter(14);
+////        // removed the void bit from the constructor method. weird
+////        // now it works
+////        System.out.println( "Value at start: " +counter );
+////
+////        int i = 0;
+////        while (i < 16){
+////            counter.next();
+////            System.out.println("value: " +counter);
+////            i++;
+////        }
+//        BoundedCounter minutes = new BoundedCounter(59);
+//        BoundedCounter hours = new BoundedCounter(23);
+//
+//        int i = 0;
+//        while (i <= 121) {
+//
+//            System.out.println(hours + ":" + minutes);
+//            // advance the minutes
+////            minutes.next();
+////            // avdance the hours
+////            hours.next();
+////            if (minutes <= 59){
+////                minutes.next();
+////            }else(minutes >= 60){
+////            hours.next();
+////            minutes.next();
+////        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+////            if (minutes.getValue() <= 59 && hours.getValue() <= 23) {
+////                minutes.next();
+////                // this would keep the minutes incrementing
+////                //  break;
+//                // hours.next();
+//// i am missing something, minutes and  hours reset themselves
+//// find a way of tying minutes with hours
+////
+////            } else if (minutes.getValue() >= 59) {
+////                hours.next();
+////                // minutes would get reset back to zero by design of the constructor
+////                // and the while loop continues.
+////                // hence the need for a break here
+////                //break;
+////                
+////               
+////            }
+//            
+//          // advance minutes
+//          minutes.next();
+////          if (minutes.getValue() >= 59){
+//              if (minutes.getValue() == 0){
+//              hours.next();
+//          }
+//            
+//            // my head is toasted
+//// maybe envelope this whole thing inside an if block for hours.getvalue
+//            i++;
+//        }
+
+    }
+//        
+}
+
+#+END_SRC
+
+
+// this works
+* bounded counter , main
+  #+BEGIN_SRC java
+//
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        
+        Scanner reader = new Scanner(System.in);
+        
+        BoundedCounter seconds = new BoundedCounter(50);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+        
+        System.out.print("seconds: ");
+        String s1 = reader.nextLine();
+        int s = Integer.parseInt(s1);
+        
+        System.out.print("minutes: ");
+        String m1 = reader.nextLine();
+        int m = Integer.parseInt(m1);
+        
+        System.out.print("hours: ");
+        String h1 = reader.nextLine();
+        int h = Integer.parseInt(h1);
+        
+        seconds.setValue(s);
+        minutes.setValue(m);
+        hours.setValue(h);
+        
+        int i = 0;
+        while (i < 121){
+            System.out.println(hours +":"+minutes+":"+seconds);
+            seconds.next();
+            if (seconds.getValue() == 0){
+                
+                minutes.next();
+                
+                if (minutes.getValue() == 0){
+                    hours.next();
+                }
+            }
+            i++;
+            
+            
+        }
+//        // writ
+
+
+//
+
+//
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        BoundedCounter seconds = new BoundedCounter(59);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        System.out.print("seconds: ");
+        String s1 = reader.nextLine();
+        int s = Integer.parseInt(s1);
+
+        seconds.setValue(s);
+        
+        System.out.print("minutes: ");
+        String m1 = reader.nextLine();
+        int m = Integer.parseInt(m1);
+
+        minutes.setValue(m);
+        
+        System.out.print("hours: ");
+        String h1 = reader.nextLine();
+        int h = Integer.parseInt(h1);
+
+        
+        
+        hours.setValue(h);
+
+        
+        int i = 0;
+        while (i < 121) {
+
+            System.out.println(hours + ":" + minutes + ":" + seconds);
+//            seconds.next();
+//            if (seconds.getValue() == 0){
+//                seconds.next();
+//                minutes.next();
+//                
+//                if (minutes.getValue() == 0){
+//                    seconds.next();
+//                    minutes.next();
+//                    hours.next();
+//                }
+// increment seconds
+seconds.next();
+// check the second hand
+if (seconds.getValue() == 0){
+    //increment minutes
+    minutes.next();
+        }
+// check the minute hand
+if (minutes.getValue() == 0){
+    hours.next();
+}
+if (hours.getValue() == 0){
+    // reset
+    int resetvalue = 0;
+    seconds.setValue(resetvalue);
+    minutes.setValue(resetvalue);
+    hours.setValue(resetvalue);
+}
+
+        i++;
+
+    }
+
+//        // write here code to ensure that BoundedCounter works as expected
+//        // before starting 78.3 remove the extra code and use the skeleton shown
+//        // in the assignment
+//// create a new counter object
+//
+////        BoundedCounter counter = new BoundedCounter(14);
+////        // removed the void bit from the constructor method. weird
+////        // now it works
+////        System.out.println( "Value at start: " +counter );
+////
+////        int i = 0;
+////        while (i < 16){
+////            counter.next();
+////            System.out.println("value: " +counter);
+////            i++;
+////        }
+//        BoundedCounter minutes = new BoundedCounter(59);
+//        BoundedCounter hours = new BoundedCounter(23);
+//
+//        int i = 0;
+//        while (i <= 121) {
+//
+//            System.out.println(hours + ":" + minutes);
+//            // advance the minutes
+////            minutes.next();
+////            // avdance the hours
+////            hours.next();
+////            if (minutes <= 59){
+////                minutes.next();
+////            }else(minutes >= 60){
+////            hours.next();
+////            minutes.next();
+////        // move the minute hand, if minutes >= limit, move the hour hand, else continue with loop    
+////            if (minutes.getValue() <= 59 && hours.getValue() <= 23) {
+////                minutes.next();
+////                // this would keep the minutes incrementing
+////                //  break;
+//                // hours.next();
+//// i am missing something, minutes and  hours reset themselves
+//// find a way of tying minutes with hours
+////
+////            } else if (minutes.getValue() >= 59) {
+////                hours.next();
+////                // minutes would get reset back to zero by design of the constructor
+////                // and the while loop continues.
+////                // hence the need for a break here
+////                //break;
+////                
+////               
+////            }
+//            
+//          // advance minutes
+//          minutes.next();
+////          if (minutes.getValue() >= 59){
+//              if (minutes.getValue() == 0){
+//              hours.next();
+//          }
+//            
+//            // my head is toasted
+//// maybe envelope this whole thing inside an if block for hours.getvalue
+//            i++;
+//        }
+}
+//        
+}
+  
+  #+END_SRC
+* bounded counter
+
+#+BEGIN_SRC java
+//
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author majhi
+ */
+public class BoundedCounter {
+
+    private int value;
+    private final int upperLimit;
+//    private final int limit = 14;
+//    public void BoundedCounter(int whatever) {
+
+    public BoundedCounter(int upperLimit) {
+        // there is no void in the example why is that.
+        // the constructor method BoundedCounter does not have keyword void, why is that.??
+        this.upperLimit = upperLimit;
+        this.value = 0; // it would start at zero and then limited by the upperbound
+        // or in this case upperLimit;
+
+    }
+
+    public void next() {
+//        if (this.value > this.upperLimit) {
+//            //reset to zero
+//            this.value = 0;
+//            // break; // can a if thing hava  break, there is no loop, how to prevent it from executing next block
+//        } else if (this.value <= this.upperLimit) {
+//            this.value++;
+//        }
+
+//        while (this.value < upperLimit) {
+//
+//            this.value++;
+//            if (this.value - upperLimit == 0) {
+//                
+//                // THIS IS BETTER THAN
+//                // if(this.value <= upperLimit)
+//                this.value = 0;
+//            }
+//            break;
+//        }
+if (this.value < upperLimit){
+    this.value++;
+}
+if (this.value - upperLimit == 0 ){
+    this.value = 0;
+    
+}
+
+//        while (this.value < this.upperLimit) {
+//            this.value++;
+//            break;
+//        }
+//        
+//        if (this.value >= this.upperLimit) {
+//            // reset to zero
+//            this.value = 0;
+//        }
+    }
+
+    public int getValue() {
+
+        return this.value;
+
+    }
+
+    public void setValue(int thiscounter) {
+//        if (!(thiscounter < 0 && thiscounter > this.upperLimit )){
+//            this.value = thiscounter;
+//        }
+//        
+        //thiscounter < 0 && thiscounter > this.upperLimit
+        // this is idiotic, they are mutually exclusive.
+
+//        while ((thiscounter >= 0) && (thiscounter < this.upperLimit)) {
+//
+//            this.value = thiscounter;
+//            break;
+
+// all these if statements of logic are WRONG
+
+        this.value = thiscounter;
+        
+    }
+
+
+public String toString() {
+        // if this.value < 10; then return "0"+this.value
+        if (this.value < 10){
+            return "0"+this.value+"" ;
+        }else{
+        return "" + this.value + "";
+        }
+    }
+
+}
+
+
+//
+
+//
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        BoundedCounter seconds = new BoundedCounter(59);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
+
+        System.out.print("seconds: ");
+        String s1 = reader.nextLine();
+        int s = Integer.parseInt(s1);
+
+        seconds.setValue(s);
+
+        System.out.print("minutes: ");
+        String m1 = reader.nextLine();
+        int m = Integer.parseInt(m1);
+
+        minutes.setValue(m);
+
+        System.out.print("hours: ");
+        String h1 = reader.nextLine();
+        int h = Integer.parseInt(h1);
+
+        hours.setValue(h);
+
+        int i = 0;
+        while (i < 121) {
+
+            System.out.println(hours + ":" + minutes + ":" + seconds);
+
+// increment seconds
+            seconds.next();
+// check the second hand
+            if (seconds.getValue() == 0) {
+                //increment minutes
+                minutes.next();
+                  if (minutes.getValue() == 0) {
+                hours.next();
+                 if (hours.getValue() == 0) {
+                // reset
+                int resetvalue = 0;
+                seconds.setValue(resetvalue);
+                minutes.setValue(resetvalue);
+                hours.setValue(resetvalue);
+            }
+            }
+            }
+// check the minute hand
+          
+           
+
+            i++;
+
+        }
+
+    }
+
+}
+
+
+//
+
+
+#+END_SRC
+
+This part is important because you are about to create a constructor that would initiate an arraylist.
+
+//
+* class menu
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class Menu {
+
+    private final ArrayList<String> meals;
+
+    public Menu() {
+        this.meals = new ArrayList<String>();
+    }
+
+    // add the methods here
+    public void addMeal(String meal) {
+        // add this.meal to thie list meals
+        //meals.add(meal);
+        // is this meal is alread in the list, they do not add it.
+        // for loop, through the arraylist
+        // see for list.contains(item)
+        //   for (String items: meals){
+        // this is for loop of items and yet at every loop you are looking at the entire arraylist meals
+        //     if (items.equals(meal)){
+        // dont do anything
+        // very sure this is where the mistake is occuring
+        //       break;
+
+        //   }else{
+        //      meals.add(meal);
+        //  }
+        // i am doing something wrong
+        // }
+        // let us do this again
+        int final_index = meals.size() - 1;
+        //   for (int x = 0; x <= final_index ; x++){
+        //      if (meal.equals(meals.indexOf(x)) ){
+        //         break;
+        //     }else{
+        //        meals.add(meal);
+        //    }
+        //  }
+        //this too is not working
+        // let us try again with a while block
+        int x = 0;
+        // while(final_index >= 0){
+        while (final_index != -1) { // this is not working, how about while (!(final_index !=-1))
+
+            {
+                if (meal.equals(meals.indexOf(x))) {
+                    break;
+                } else {
+                    meals.add(meal);
+
+                    final_index--;
+                    x++;
+                }
+            }
+        }
+    }
+
+    public void printMeal() {
+        for (String items : meals) {
+            System.out.println(items);
+        }
+    }
+
+    public void clearMenu() {
+        meals.clear();
+        // this trick is nice.
+    }
+}
+
+//
+
+#+END_SRC
+
+The important bit is as follows.
+
+//
+* class menu
+#+BEGIN_SRC java
+
+import java.util.ArrayList;
+
+public class Menu {
+
+    private final ArrayList<String> meals;
+
+    public Menu() {
+        this.meals = new ArrayList<String>();
+    }
+
+// this is the important bit, you have to basically import that thing.
+import java.util.ArrayList;
+
+then, you have to initiate the list
+
+private final arraylist<string> name_of_list;
+
+this.name_of_list = new ArrayList<type>()
+
+// problem is that , there is no way you can name your list.
+
+how do you fix that.
+//
+
+#+END_SRC
+* number statistics
+
+#+BEGIN_SRC java
+//
+import java.util.ArrayList;
+//        i thought we were making an array, we are not.
+public class NumberStatistics {
+    // this is the place for declaring variables
+   // String name;
+    private int amountOfNumbers;
+    // what is the use for this variable
+    private ArrayList<Integer> mylist;
+//    
+    public void NumberStaticstics(){
+        this.mylist = new ArrayList<Integer>();
+        this.amountOfNumbers = 0;
+    // after this you do not need to call it as this.mylist
+    // just, mylist would suffice
+        
+    }
+    
+    public void addNumber(int number){
+        
+        boolean add = mylist.add(number);
+        if (add){
+        this.amountOfNumbers++;
+        }
+    }
+    
+    public int amountOfNumbers(){
+        
+        return this.amountOfNumbers;
+        
+    }
+  
+    
+}
+
+
+//
+
+
+
+#+END_SRC
+* number stats , main
+
+#+BEGIN_SRC java
+import java.util.Scanner;
+//import java.util.ArrayList;
+// this is not required. the list is really being made in the other file
+public class Main {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // Write test code here
+        // Remember to remove all the extra code when doing assignments  79.3 and 79.4
+
+        // Define three NumberStatistics objects in your program:
+        // The first is used to track the sum of all given numbers.
+        // The second takes care of even numbers and the third the odd numbers.
+
+        // The tests does not work if you do not create the objects in the correct order
+        
+        // let us create the object
+        
+        NumberStatistics stats = new NumberStatistics();
+        
+        stats.addNumber(3);
+        stats.addNumber(5);
+        stats.addNumber(1);
+        stats.addNumber(2);
+        
+        System.out.println(stats.amountOfNumbers());
+//        System.out.println("that was nice");
+        
+//        for (items: stats){
+//            
+//            System.out.println(int items);
+//        
+//        }
+    }
+}
+
+// everything is wrong, nothing works
+
+#+END_SRC
+
+
+* class NumberStatistics
+
+#+BEGIN_SRC java
+//
+
+public class NumberStatistics {
+    // this is the place for declaring variables
+   // String name;
+    private int amountOfNumbers;
+    private int sumOfNumbers;
+    // there would be a counter , which counts how many integers were put in
+    // another would sum up all those integers that were put in.
+    
+    public NumberStatistics(){
+        sumOfNumbers = 0;
+        amountOfNumbers = 0;
+        // still not sure about the use of the keyword this.
+        
+        
+    }
+    public void addNumber(int numbers){
+        sumOfNumbers += numbers;
+        amountOfNumbers++;
+        // do i need to stop using the keyword , this.
+    }
+    
+    public int amountOfNumbers(){
+        return amountOfNumbers;
+    }
+    
+    public int sum(){
+        return sumOfNumbers;
+    }
+    
+    public double average(){
+        
+    return sumOfNumbers / (double)amountOfNumbers;
+      //  return sum() / (double)amountOfNumbers();
+      // this is clearly wrong
+      
+    // is this even right
+  //  return sum()/amountOfNumbers();
+    
+    
+        
+    }
+    
+}
+
+//
+
+import java.util.Scanner;
+//import java.util.ArrayList;
+// this is not required. the list is really being made in the other file
+public class Main {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // Write test code here
+        // Remember to remove all the extra code when doing assignments  79.3 and 79.4
+
+     
+        
+        NumberStatistics stats = new NumberStatistics();
+        
+        stats.addNumber(3);
+        stats.addNumber(5);
+        stats.addNumber(1);
+        stats.addNumber(2);
+        
+        System.out.println(stats.amountOfNumbers());
+
+        System.out.println("Amount "+stats.amountOfNumbers());
+        System.out.println("Sum "+stats.sum());
+        System.out.println("Average "+stats.average());
+        
+    }
+}
+
+//
+
+// i am in a big problem
+
+// so you can make a constructor class, so there are things like different methods available to the object you just created 
+
+#+END_SRC
+
+
+* class NumberStatistics
+
+#+BEGIN_SRC java
+
+// 
+
+//
+
+public class NumberStatistics {
+    // this is the place for declaring variables
+   // String name;
+    private int amountOfNumbers;
+    private int sumOfNumbers;
+    // there would be a counter , which counts how many integers were put in
+    // another would sum up all those integers that were put in.
+    
+    public NumberStatistics(){
+        sumOfNumbers = 0;
+        amountOfNumbers = 0;
+        // still not sure about the use of the keyword this.
+        
+        
+    }
+    public void addNumber(int numbers){
+        sumOfNumbers += numbers;
+        amountOfNumbers++;
+        // do i need to stop using the keyword , this.
+    }
+    
+    public int amountOfNumbers(){
+        return amountOfNumbers;
+    }
+    
+    public int sum(){
+        return sumOfNumbers;
+    }
+    
+    public double average(){
+        if (amountOfNumbers == 0 ){
+            amountOfNumbers = 1;
+        }
+    return sumOfNumbers / (double)amountOfNumbers;
+      //  return sum() / (double)amountOfNumbers();
+      // this is clearly wrong
+      
+    // is this even right
+  //  return sum()/amountOfNumbers();
+    
+    
+        
+    }
+    
+}
+
+
+//
+
+
+
+import java.util.Scanner;
+//import java.util.ArrayList;
+// this is not required. the list is really being made in the other file
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // Write test code here
+        // Remember to remove all the extra code when doing assignments  79.3 and 79.4
+        NumberStatistics NumberStatistics = new NumberStatistics();
+
+        // ask user for some numbers
+//        stats.addNumber(3);
+//        stats.addNumber(5);
+//        stats.addNumber(1);
+//        stats.addNumber(2);
+        while (true) {
+            System.out.println("Numbers: ");
+            String user_input = reader.nextLine();
+
+            int user_input_number = Integer.parseInt(user_input);
+            if (user_input_number == -1) {
+//                System.out.println("Average " + stats.average());
+                System.out.println("Sum "+NumberStatistics.sum());
+                break;
+
+            } else {
+                NumberStatistics.addNumber(user_input_number);
+            }
+//        System.out.println(stats.amountOfNumbers());
+//        System.out.println("Amount "+stats.amountOfNumbers());
+//        System.out.println("Sum "+stats.sum());
+//        System.out.println("Average "+stats.average());
+
+        }
+    }}
+
+
+//
+
+#+END_SRC
+
+
